@@ -60,7 +60,7 @@ export default function HomePage() {
             <Image src="/GAV_Logo1_nobgWhite.png" alt="Giang Anh Vu personal monogram" fill className="object-contain" priority />
           </div>
           <div className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/80">Portfolio of</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white/80"></p>
             <h1 className="font-serif text-4xl tracking-[0.08em] text-white sm:text-5xl md:text-6xl">Giang Anh Vu</h1>
             <p className="max-w-xl text-lg text-white/80 sm:text-xl">
               Engineering, Business, and Creativity
@@ -94,14 +94,16 @@ export default function HomePage() {
         <div className="section-container space-y-16">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
             <div className="space-y-6">
-              <p className="text-base font-semibold uppercase tracking-[0.42em] text-white/60">A polished introduction</p>
+              <p className="text-base font-semibold uppercase tracking-[0.42em] text-white/60">Introduction About Me</p>
               <h2 className="font-serif text-3xl text-white sm:text-4xl">
-                Engineering elegance with a devotion to human-centered detail.
+                Scholar | Creator | Innovator
               </h2>
               <p className="max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">
-                I build thoughtful systems that feel effortless—balancing a mechanical engineering background with a
-                designer&apos;s intuition. Whether it&apos;s orchestrating research tooling at MagLab or prototyping new digital
-                experiences, I bring precision, warmth, and a sense of narrative to every collaboration.
+                Hi, I'm Giang Anh D. Vu. I was born in Ho Chi Minh City, Vietnam on March 16th, 2007 and raised in Maryland. I am currently
+                studying Mechanical Engineering at the University of Michigan, but I love programming and have an interest in business and entrepreneurship.
+                I am passionate about building thoughtful designs that balance an engineering background with
+                human intuition. Whether it&apos;s prototyping new digital experiences or orchestrating research tooling,
+                I bring precision, warmth, and a sense of narrative to every collaboration.
               </p>
             </div>
 
@@ -111,7 +113,8 @@ export default function HomePage() {
                 <div>
                   <p className="text-base font-semibold uppercase tracking-[0.45em] text-white/60">Currently</p>
                   <p className="mt-2 text-lg text-white/75">
-                    Refining Lucentia and expanding research automation at the University of Michigan&apos;s MagLab.
+                    Expanding research automation for space physics at the University of Michigan&apos;s MagLab. Publishing my first research paper.
+                    Building Lucentia, a financial intelligence platform.
                   </p>
                 </div>
               </div>
@@ -124,7 +127,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-5 w-5 text-white/60" />
-                  <span>San Francisco, California &amp; Ann Arbor, Michigan</span>
+                  <span>Washington, D.C. &amp; Ann Arbor, Michigan</span>
                 </div>
               </div>
             </div>
