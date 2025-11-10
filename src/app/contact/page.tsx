@@ -49,10 +49,10 @@ export default function ContactPage() {
     <div className="relative bg-ink py-28">
       <div className="section-container space-y-16">
         <header className="space-y-6 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.45em] text-white/50">Let&apos;s Connect</p>
-          <h1 className="font-serif text-4xl text-white sm:text-5xl">Contact</h1>
+          <p className="text-xs uppercase tracking-[0.45em] text-white/50">Collaborations | Commissions | Conversations</p>
+          <h1 className="font-serif text-4xl text-white sm:text-5xl">Contact Me</h1>
           <p className="mx-auto max-w-3xl text-sm leading-7 text-white/60 md:mx-0 md:text-base">
-            Opportunities, collaborations, or conversations about thoughtful, human-centered experiences—reach out and let&apos;s build something remarkable together.
+            Reach out and let&apos;s build something remarkable together.
           </p>
         </header>
 
