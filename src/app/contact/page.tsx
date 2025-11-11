@@ -6,7 +6,7 @@ const contactDetails = [
     icon: Mail,
     label: "Email",
     value: "contact@gianganhvu.com",
-    href: "mailto:contact@gianganhvu.com",
+    href: "mailto:gvu@umich.edu",
   },
   {
     icon: Phone,
