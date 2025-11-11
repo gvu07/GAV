@@ -17,7 +17,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Washington, D.C.  Ann Arbor, MI",
+    value: "Washington, D.C. | Ann Arbor, MI",
   },
 ];
 
