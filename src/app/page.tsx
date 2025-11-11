@@ -94,7 +94,7 @@ export default function HomePage() {
         <div className="section-container space-y-16">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
             <div className="space-y-6">
-              <p className="text-base font-semibold uppercase tracking-[0.42em] text-white/60">Introduction About Me</p>
+              <p className="text-base font-semibold uppercase tracking-[0.42em] text-white/60">My Introduction</p>
               <h2 className="font-serif text-3xl text-white sm:text-4xl">
                 Scholar | Creator | Innovator
               </h2>
@@ -105,6 +105,13 @@ export default function HomePage() {
                 human intuition. Whether it&apos;s prototyping new digital experiences or orchestrating research tooling,
                 I bring precision, warmth, and a sense of narrative to every collaboration.
               </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white/80 transition hover:border-white/60 hover:text-white"
+              >
+                Learn More About Me
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl">
