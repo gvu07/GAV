@@ -6,7 +6,7 @@ const contactDetails = [
     icon: Mail,
     label: "Email",
     value: "contact@gianganhvu.com",
-    href: "mailto:gvu@umich.edu",
+    href: "mailto:contact@gianganhvu.com",
   },
   {
     icon: Phone,
@@ -66,9 +66,15 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs uppercase tracking-[0.35em] text-white/40">{detail.label}</p>
                     {detail.href ? (
-                      <Link href={detail.href} className="mt-2 block text-sm text-white/70 transition hover:text-white">
-                        {detail.value}
-                      </Link>
+                      detail.href.startsWith('mailto:') || detail.href.startsWith('tel:') ? (
+                        <a href={detail.href} className="mt-2 block text-sm text-white/70 transition hover:text-white">
+                          {detail.value}
+                        </a>
+                      ) : (
+                        <Link href={detail.href} className="mt-2 block text-sm text-white/70 transition hover:text-white">
+                          {detail.value}
+                        </Link>
+                      )
                     ) : (
                       <p className="mt-2 text-sm text-white/70">{detail.value}</p>
                     )}
@@ -99,13 +105,13 @@ export default function ContactPage() {
               <p className="text-sm leading-7 text-white/60">
                 Share the vision, timeline, or challenges you&apos;re exploring. I typically respond within two business days.
               </p>
-              <Link
+              <a
                 href="mailto:contact@gianganhvu.com?subject=Let%27s%20Collaborate"
                 className="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white/70 transition hover:border-white/60 hover:text-white"
               >
                 Compose Email
                 <ArrowUpRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
 
             <div className="space-y-4 rounded-3xl border border-white/10 bg-white/[0.02] p-10">
