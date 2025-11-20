@@ -128,9 +128,9 @@ export default function HomePage() {
               <div className="mt-6 grid gap-4 text-lg text-white/70">
                 <div className="flex items-start gap-3">
                   <Mail className="mt-1 h-5 w-5 text-white/60" />
-                  <Link href="mailto:contact@gianganhvu.com" className="font-semibold hover:text-white">
+                  <a href="mailto:contact@gianganhvu.com" className="font-semibold hover:text-white">
                     contact@gianganhvu.com
-                  </Link>
+                  </a>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-5 w-5 text-white/60" />
@@ -214,12 +214,12 @@ export default function HomePage() {
             >
               Download Resume
             </Link>
-            <Link
+            <a
               href="mailto:contact@gianganhvu.com"
               className="inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white/80 transition hover:border-white/50 hover:text-white"
             >
               Email Me
-            </Link>
+            </a>
           </div>
         </div>
 
