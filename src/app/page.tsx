@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Mail, MapPin, Sparkles, Code, Database, TrendingUp, Award } from "lucide-react";
 
 // Update the value below to swap the hero photo.
-// Test Commit
+// Test Commit 2
 const heroImage = "/Hero_Image2.png";
 
 const highlights = [
