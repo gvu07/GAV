@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const navItems = [
+  { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
@@ -42,7 +43,7 @@ export function Header() {
               priority
             />
           </div>
-          <span className="font-serif text-2xl font-semibold tracking-[0.18em] uppercase text-white">GAV</span>
+          <span className="font-serif text-2xl font-semibold tracking-[0.18em] uppercase text-white"></span>
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">

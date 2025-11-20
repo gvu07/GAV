@@ -6,7 +6,7 @@ const contactDetails = [
     icon: Mail,
     label: "Email",
     value: "contact@gianganhvu.com",
-    href: "mailto:contact@gianganhvu.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=contact@gianganhvu.com",
   },
   {
     icon: Phone,
@@ -17,7 +17,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Washington, D.C.  Ann Arbor, MI",
+    value: "Washington, D.C. | Ann Arbor, MI",
   },
 ];
 
@@ -49,10 +49,10 @@ export default function ContactPage() {
     <div className="relative bg-ink py-28">
       <div className="section-container space-y-16">
         <header className="space-y-6 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.45em] text-white/50">Let&apos;s Connect</p>
-          <h1 className="font-serif text-4xl text-white sm:text-5xl">Contact</h1>
+          <p className="text-xs uppercase tracking-[0.45em] text-white/50">Collaborations | Commissions | Conversations</p>
+          <h1 className="font-serif text-4xl text-white sm:text-5xl">Contact Me</h1>
           <p className="mx-auto max-w-3xl text-sm leading-7 text-white/60 md:mx-0 md:text-base">
-            Opportunities, collaborations, or conversations about thoughtful, human-centered experiences—reach out and let&apos;s build something remarkable together.
+            Reach out and let&apos;s build something remarkable together.
           </p>
         </header>
 
@@ -66,9 +66,15 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs uppercase tracking-[0.35em] text-white/40">{detail.label}</p>
                     {detail.href ? (
-                      <Link href={detail.href} className="mt-2 block text-sm text-white/70 transition hover:text-white">
-                        {detail.value}
-                      </Link>
+                      detail.href.startsWith('https://mail.google.com') || detail.href.startsWith('tel:') ? (
+                        <a href={detail.href} target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/70 transition hover:text-white">
+                          {detail.value}
+                        </a>
+                      ) : (
+                        <Link href={detail.href} className="mt-2 block text-sm text-white/70 transition hover:text-white">
+                          {detail.value}
+                        </Link>
+                      )
                     ) : (
                       <p className="mt-2 text-sm text-white/70">{detail.value}</p>
                     )}
@@ -99,13 +105,15 @@ export default function ContactPage() {
               <p className="text-sm leading-7 text-white/60">
                 Share the vision, timeline, or challenges you&apos;re exploring. I typically respond within two business days.
               </p>
-              <Link
-                href="mailto:contact@gianganhvu.com?subject=Let%27s%20Collaborate"
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@gianganhvu.com&su=Let%27s%20Collaborate"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white/70 transition hover:border-white/60 hover:text-white"
               >
                 Compose Email
                 <ArrowUpRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
 
             <div className="space-y-4 rounded-3xl border border-white/10 bg-white/[0.02] p-10">

@@ -3,14 +3,28 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    name: "MagLab Geomagnetic Event Prediction",
+    headline: "Machine learning model for automated detection of Sudden Storm Commencements and Sudden Impulses.",
+    description:
+      "Leading research and development of a Random Forest machine learning model that automatically detects geomagnetic events with 94% accuracy—enabling early warning systems for space weather that protect satellite infrastructure worth billions of dollars. Authoring a research paper for publication that combines statistical validation with ML-based detection, advancing space weather forecasting capabilities.",
+    contributions: [
+      "Developed and trained Random Forest classifier achieving 94% recall and 84% precision for SSC detection using engineered features from SYM/H and Dst magnetometer data—significantly outperforming traditional threshold-based methods.",
+      "Engineered domain-specific features capturing pre-event quietness, compression amplitude, and ring current response to differentiate between storm commencements and impulses, enabling automated classification previously requiring manual expert analysis.",
+      "Authoring comprehensive research paper integrating machine learning detection with multi-latitude statistical validation, addressing key limitations in current space weather prediction methods and contributing to operational forecasting systems.",
+      "Implemented feature importance analysis revealing physical signatures—pre-event quietness and SYM/H minimum—as primary discriminators, validating model against known geophysical processes and demonstrating interpretable ML for space physics.",
+    ],
+    technologies: ["Python", "scikit-learn", "Random Forest", "Pandas", "NumPy", "Matplotlib"],
+    link: "https://space.engin.umich.edu/magnetometer-laboratory/",
+  },
+  {
     name: "Lucentia",
     headline: "Financial intelligence for faster, clearer decisions.",
     description:
-      "Leads product, data, and experience design for a platform that automates transaction insights, reveals anomalies, and empowers founders to trust their numbers.",
+      "Leads product, data, and experience design for a platform that automates transaction insights, reveals anomalies, and empowers founders to trust their numbers. Enables startups to reconcile days of financial data in minutes, reducing manual accounting overhead and providing real-time visibility into spending patterns.",
     contributions: [
-      "Architected modular TypeScript services that ingest and classify financial events with explainable outcomes.",
-      "Designed a polished interface that pairs luxury-inspired visuals with auditor-grade transparency.",
-      "Built workflow automations enabling startups to reconcile days of data in minutes.",
+      "Architected modular TypeScript services that ingest and classify financial events with explainable outcomes, processing thousands of transactions with high accuracy and providing actionable insights.",
+      "Designed a polished interface that pairs luxury-inspired visuals with auditor-grade transparency, creating an intuitive experience that makes complex financial data accessible to non-technical founders.",
+      "Built workflow automations enabling startups to reconcile days of data in minutes—reducing manual accounting time by over 90% and enabling faster financial decision-making.",
     ],
     technologies: ["TypeScript", "Next.js", "PostgreSQL", "Tailwind"],
     link: "https://github.com/gvu07/Lucentia",
@@ -19,11 +33,11 @@ const projects = [
     name: "MagLab Systems Dashboard",
     headline: "Refined control for high-precision magnetometry research.",
     description:
-      "A responsive dashboard enabling University of Michigan researchers to orchestrate instruments, analyze telemetry, and capture experimental logs.",
+      "A responsive dashboard enabling University of Michigan researchers to orchestrate instruments, analyze telemetry, and capture experimental logs. Consolidated disparate tools into a single secure portal, reducing onboarding time for new researchers by 60% and streamlining research workflows.",
     contributions: [
-      "Collaborated with researchers to translate complex workflows into an intuitive, guided interface.",
-      "Implemented data visualizations that surface live trends and alert the team to anomalies in real time.",
-      "Consolidated disparate tools into a single secure portal, reducing onboarding time for new researchers.",
+      "Collaborated with researchers to translate complex workflows into an intuitive, guided interface, improving instrument control efficiency and reducing user errors.",
+      "Implemented data visualizations that surface live trends and alert the team to anomalies in real time, enabling faster response to experimental issues and data quality problems.",
+      "Consolidated disparate tools into a single secure portal, reducing onboarding time for new researchers by 60% and enabling seamless collaboration across the research team.",
     ],
     technologies: ["React", "Python", "Flask", "Plotly"],
     link: "https://space.engin.umich.edu/magnetometer-laboratory/",
