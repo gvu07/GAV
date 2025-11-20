@@ -3,6 +3,20 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    name: "MagLab Geomagnetic Event Prediction",
+    headline: "Machine learning model for automated detection of Sudden Storm Commencements and Sudden Impulses.",
+    description:
+      "Leading research and development of a Random Forest machine learning model to automatically detect and classify geomagnetic events (SSC/SI) using magnetometer data. Authoring a research paper for publication that combines statistical validation with ML-based detection, advancing space weather forecasting capabilities.",
+    contributions: [
+      "Developed and trained Random Forest classifier achieving 94% recall and 84% precision for SSC detection using engineered features from SYM/H and Dst magnetometer data.",
+      "Engineered domain-specific features capturing pre-event quietness, compression amplitude, and ring current response to differentiate between storm commencements and impulses.",
+      "Authoring comprehensive research paper integrating machine learning detection with multi-latitude statistical validation, addressing key limitations in current space weather prediction methods.",
+      "Implemented feature importance analysis revealing physical signatures—pre-event quietness and SYM/H minimum—as primary discriminators, validating model against known geophysical processes.",
+    ],
+    technologies: ["Python", "scikit-learn", "Random Forest", "Pandas", "NumPy", "Matplotlib"],
+    link: "https://space.engin.umich.edu/magnetometer-laboratory/",
+  },
+  {
     name: "Lucentia",
     headline: "Financial intelligence for faster, clearer decisions.",
     description:
