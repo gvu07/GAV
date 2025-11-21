@@ -76,13 +76,28 @@ export default function ProjectsPage() {
               className="rounded-3xl border border-white/10 bg-white/[0.02] p-12 transition hover:border-white/25 hover:bg-white/[0.05]"
             >
               <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-                <div className="space-y-5">
+                <div className="space-y-5 flex-1">
                   <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.38em] text-white/55">Featured</p>
                     <h2 className="mt-2 font-serif text-4xl text-white">{project.name}</h2>
                     <p className="mt-4 text-base font-semibold uppercase tracking-[0.42em] text-white/55">{project.headline}</p>
                   </div>
                   <p className="max-w-2xl text-lg leading-8 text-white/75">{project.description}</p>
+
+                  {project.name === "Lucentia" && (
+                    <div className="mt-6 max-w-3xl">
+                      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.38em] text-white/55">Demo Video</p>
+                      <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
+                        <video
+                          src="/Lucentia_Demo.mp4"
+                          controls
+                          className="h-full w-full object-contain"
+                        >
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  )}
 
                   <ul className="space-y-3 text-lg text-white/70">
                     {project.contributions.map((point) => (
