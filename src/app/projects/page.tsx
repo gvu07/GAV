@@ -6,15 +6,16 @@ const projects = [
     name: "MagLab Geomagnetic Event Prediction",
     headline: "Machine learning model for automated detection of Sudden Storm Commencements and Sudden Impulses.",
     description:
-      "Leading research and development of a Random Forest machine learning model that automatically detects geomagnetic events with 94% accuracy—enabling early warning systems for space weather that protect satellite infrastructure worth billions of dollars. Authoring a research paper for publication that combines statistical validation with ML-based detection, advancing space weather forecasting capabilities.",
+      "Leading research and development of a Random Forest machine learning model that automatically detects geomagnetic events with high accuracy—enabling early warning systems for space weather that protect satellite infrastructure worth billions of dollars. Currently improving model performance and working on publishing a comprehensive research paper that combines statistical validation with ML-based detection, advancing space weather forecasting capabilities.",
     contributions: [
-      "Developed and trained Random Forest classifier achieving 94% recall and 84% precision for SSC detection using engineered features from SYM/H and Dst magnetometer data—significantly outperforming traditional threshold-based methods.",
+      "Developed and trained Random Forest classifier achieving 88.9% recall and 88.9% precision for SSC detection using engineered features from SYM/H magnetometer data—significantly outperforming traditional threshold-based methods.",
       "Engineered domain-specific features capturing pre-event quietness, compression amplitude, and ring current response to differentiate between storm commencements and impulses, enabling automated classification previously requiring manual expert analysis.",
-      "Authoring comprehensive research paper integrating machine learning detection with multi-latitude statistical validation, addressing key limitations in current space weather prediction methods and contributing to operational forecasting systems.",
-      "Implemented feature importance analysis revealing physical signatures—pre-event quietness and SYM/H minimum—as primary discriminators, validating model against known geophysical processes and demonstrating interpretable ML for space physics.",
+      "Currently improving model performance for SSC/SI differentiation and multi-latitude generalization while preparing comprehensive research paper integrating machine learning detection with multi-latitude statistical validation.",
+      "Implemented feature importance analysis revealing physical signatures—SYM/H minimum and pre-event quietness—as primary discriminators, validating model against known geophysical processes and demonstrating interpretable ML for space physics.",
     ],
     technologies: ["Python", "scikit-learn", "Random Forest", "Pandas", "NumPy", "Matplotlib"],
-    link: "https://space.engin.umich.edu/magnetometer-laboratory/",
+    link: "https://github.com/gvu07/predictionModel_SSC_SC",
+    inProgress: true,
   },
   {
     name: "Lucentia",
@@ -78,7 +79,14 @@ export default function ProjectsPage() {
               <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
                 <div className="space-y-5 flex-1">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.38em] text-white/55">Featured</p>
+                    <div className="flex items-center gap-3">
+                      <p className="text-sm font-semibold uppercase tracking-[0.38em] text-white/55">Featured</p>
+                      {project.inProgress && (
+                        <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
+                          In Progress
+                        </span>
+                      )}
+                    </div>
                     <h2 className="mt-2 font-serif text-4xl text-white">{project.name}</h2>
                     <p className="mt-4 text-base font-semibold uppercase tracking-[0.42em] text-white/55">{project.headline}</p>
                   </div>
