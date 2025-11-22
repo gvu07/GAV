@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { ArrowUpRight, Briefcase, Github, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 
 const contactDetails = [
   {
@@ -41,6 +41,11 @@ const socialLinks = [
     icon: Youtube,
     label: "YouTube",
     href: "https://www.youtube.com/@GiangAnhDVu",
+  },
+  {
+    icon: Briefcase,
+    label: "Handshake",
+    href: "https://umich.joinhandshake.com/profiles/gvu",
   },
 ];
 

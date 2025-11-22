@@ -29,7 +29,7 @@ const featuredProjects = [
     name: "MagLab Geomagnetic Event Prediction",
     description:
       "ML model achieving 94% accuracy for space weather prediction—enabling early warning systems that protect satellite infrastructure worth billions.",
-    link: "https://space.engin.umich.edu/magnetometer-laboratory/",
+    link: "https://github.com/gvu07/predictionModel_SSC_SC",
     tags: ["Machine Learning", "Research", "Python"],
   },
   {
