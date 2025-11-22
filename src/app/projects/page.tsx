@@ -107,11 +107,10 @@ export default function ProjectsPage() {
                     </div>
                   )}
 
-                  <ul className="space-y-3 text-lg text-white/70">
+                  <ul className="space-y-3 pl-6 text-lg text-white/70">
                     {project.contributions.map((point) => (
-                      <li key={point} className="flex gap-3">
-                        <span className="mt-[8px] h-1.5 w-1.5 rounded-full bg-gold/80" aria-hidden="true" />
-                        <span>{point}</span>
+                      <li key={point} className="relative before:absolute before:-left-4 before:top-[10px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-gold/80">
+                        {point}
                       </li>
                     ))}
                   </ul>
