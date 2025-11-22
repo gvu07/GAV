@@ -39,7 +39,7 @@ export function Footer() {
         </div>
       </div>
 
-      <p className="mt-10 text-center text-xs uppercase tracking-[0.4em] text-white/30">
+      <p className="mt-10 text-center text-xs uppercase tracking-[0.4em] text-white/60">
         © {year} Giang Anh Vu. All Rights Reserved.
       </p>
     </footer>
