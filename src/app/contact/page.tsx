@@ -54,50 +54,50 @@ export default function ContactPage() {
     <div className="relative bg-ink py-28">
       <div className="section-container space-y-16">
         <header className="space-y-6 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.45em] text-white/50">Collaborations | Commissions | Conversations</p>
-          <h1 className="font-serif text-4xl text-white sm:text-5xl">Contact Me</h1>
-          <p className="mx-auto max-w-3xl text-sm leading-7 text-white/60 md:mx-0 md:text-base">
+          <p className="text-xs uppercase tracking-[0.45em] text-black/50">Collaborations | Commissions | Conversations</p>
+          <h1 className="font-serif text-4xl text-black sm:text-5xl">Contact Me</h1>
+          <p className="mx-auto max-w-3xl text-sm leading-7 text-black/60 md:mx-0 md:text-base">
             Reach out and let&apos;s build something remarkable together.
           </p>
         </header>
 
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-8 rounded-3xl border border-white/10 bg-white/[0.02] p-10 backdrop-blur-xl">
-            <h2 className="font-serif text-2xl text-white">Contact Information</h2>
+          <div className="space-y-8 rounded-3xl border border-black/10 bg-black/[0.02] p-10 backdrop-blur-xl">
+            <h2 className="font-serif text-2xl text-black">Contact Information</h2>
             <div className="space-y-6">
               {contactDetails.map((detail) => (
-                <div key={detail.label} className="flex items-start gap-4 text-white/70">
-                  <detail.icon className="mt-1 h-5 w-5 text-white/40" />
+                <div key={detail.label} className="flex items-start gap-4 text-black/70">
+                  <detail.icon className="mt-1 h-5 w-5 text-black/40" />
                   <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-white/40">{detail.label}</p>
+                    <p className="text-xs uppercase tracking-[0.35em] text-black/40">{detail.label}</p>
                     {detail.href ? (
                       detail.href.startsWith('https://mail.google.com') || detail.href.startsWith('tel:') ? (
-                        <a href={detail.href} target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/70 transition hover:text-white">
+                        <a href={detail.href} target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-black/70 transition hover:text-black">
                           {detail.value}
                         </a>
                       ) : (
-                        <Link href={detail.href} className="mt-2 block text-sm text-white/70 transition hover:text-white">
+                        <Link href={detail.href} className="mt-2 block text-sm text-black/70 transition hover:text-black">
                           {detail.value}
                         </Link>
                       )
                     ) : (
-                      <p className="mt-2 text-sm text-white/70">{detail.value}</p>
+                      <p className="mt-2 text-sm text-black/70">{detail.value}</p>
                     )}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="space-y-4 rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-white/50">Download</p>
-              <h3 className="font-serif text-xl text-white">Resume</h3>
-              <p className="text-sm leading-7 text-white/60">
+            <div className="space-y-4 rounded-3xl border border-black/10 bg-black/[0.03] p-6">
+              <p className="text-xs uppercase tracking-[0.35em] text-black/50">Download</p>
+              <h3 className="font-serif text-xl text-black">Resume</h3>
+              <p className="text-sm leading-7 text-black/60">
                 Get the complete overview of experience, tools, and impact across engineering and design.
               </p>
               <Link
                 href="/Giang_Anh_Vu_Resume.pdf"
                 target="_blank"
-                className="inline-flex items-center gap-3 rounded-full border border-white/30 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white transition hover:bg-white hover:text-ink"
+                className="inline-flex items-center gap-3 rounded-full border border-black/30 px-6 py-3 text-xs uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
               >
                 Download PDF
               </Link>
@@ -105,25 +105,25 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col justify-between gap-10">
-            <div className="space-y-6 rounded-3xl border border-white/10 bg-white/[0.02] p-10">
-              <h2 className="font-serif text-2xl text-white">Message</h2>
-              <p className="text-sm leading-7 text-white/60">
+            <div className="space-y-6 rounded-3xl border border-black/10 bg-black/[0.02] p-10">
+              <h2 className="font-serif text-2xl text-black">Message</h2>
+              <p className="text-sm leading-7 text-black/60">
                 Share the vision, timeline, or challenges you&apos;re exploring. I typically respond within two business days.
               </p>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@gianganhvu.com&su=Let%27s%20Collaborate"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white/70 transition hover:border-white/60 hover:text-white"
+                className="inline-flex items-center gap-3 rounded-full border border-black/20 px-6 py-3 text-xs uppercase tracking-[0.4em] text-black/70 transition hover:border-black/60 hover:text-black"
               >
                 Compose Email
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
 
-            <div className="space-y-4 rounded-3xl border border-white/10 bg-white/[0.02] p-10">
-              <h2 className="font-serif text-2xl text-white">Stay Connected</h2>
-              <p className="text-sm text-white/60">
+            <div className="space-y-4 rounded-3xl border border-black/10 bg-black/[0.02] p-10">
+              <h2 className="font-serif text-2xl text-black">Stay Connected</h2>
+              <p className="text-sm text-black/60">
                 Follow along for behind-the-scenes experiments, learning, and inspiration.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -132,9 +132,9 @@ export default function ContactPage() {
                     key={social.label}
                     href={social.href}
                     target="_blank"
-                    className="group flex items-center gap-3 rounded-2xl border border-white/15 bg-white/[0.02] px-4 py-3 text-sm text-white/60 transition hover:border-white/60 hover:text-white"
+                    className="group flex items-center gap-3 rounded-2xl border border-black/15 bg-black/[0.02] px-4 py-3 text-sm text-black/60 transition hover:border-black/60 hover:text-black"
                   >
-                    <social.icon className="h-5 w-5 text-white/40 transition group-hover:text-gold" />
+                    <social.icon className="h-5 w-5 text-black/40 transition group-hover:text-gold" />
                     <span>{social.label}</span>
                   </Link>
                 ))}

@@ -108,7 +108,7 @@ function getCategoryColor(category: string): string {
     Leadership: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
     Personal: "bg-rose-500/20 text-rose-400 border-rose-500/30",
   };
-  return colors[category] || "bg-white/10 text-white/60 border-white/20";
+  return colors[category] || "bg-black/10 text-black/60 border-black/20";
 }
 
 export default function TimelinePage() {
@@ -148,16 +148,16 @@ export default function TimelinePage() {
     <div className="relative bg-ink py-28">
       <div className="section-container">
         <header className="mb-20 space-y-6 text-center md:text-left">
-          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/60">My Journey</p>
-          <h1 className="font-serif text-4xl text-white sm:text-5xl">Timeline</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-white/75 md:mx-0 md:text-xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">My Journey</p>
+          <h1 className="font-serif text-4xl text-black sm:text-5xl">Timeline</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
             A chronological journey through key experiences, projects, and achievements that have shaped my path in engineering, research, and leadership.
           </p>
         </header>
 
         <div className="relative max-w-5xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/80 via-white/30 to-white/10 md:left-1/2 md:-translate-x-0.5"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/80 via-black/30 to-black/10 md:left-1/2 md:-translate-x-0.5"></div>
 
           {/* Timeline items */}
           <div className="space-y-16">
@@ -175,7 +175,7 @@ export default function TimelinePage() {
 
                 {/* Content card */}
                 <div
-                  className={`group flex-1 rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition hover:border-white/25 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-gold/5 ${
+                  className={`group flex-1 rounded-3xl border border-black/10 bg-black/[0.02] p-8 transition hover:border-black/25 hover:bg-black/[0.05] hover:shadow-xl hover:shadow-gold/5 ${
                     index % 2 === 0 ? 'md:mr-auto md:max-w-[48%]' : 'md:ml-auto md:max-w-[48%]'
                   }`}
                 >
@@ -186,11 +186,11 @@ export default function TimelinePage() {
                       {item.category}
                     </span>
                   </div>
-                  <h3 className="mb-3 font-serif text-2xl text-white transition group-hover:text-gold">{item.title}</h3>
-                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-white/60">
+                  <h3 className="mb-3 font-serif text-2xl text-black transition group-hover:text-gold">{item.title}</h3>
+                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-black/60">
                     {formatDate(item.date, item.dateEnd || null)}
                   </p>
-                  <p className="text-base leading-7 text-white/70">{item.description}</p>
+                  <p className="text-base leading-7 text-black/70">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -202,11 +202,11 @@ export default function TimelinePage() {
               <button
                 onClick={loadMoreItems}
                 disabled={isLoading}
-                className="inline-flex items-center gap-3 rounded-full border border-white/25 bg-white/[0.02] px-8 py-3 text-sm font-semibold uppercase tracking-[0.38em] text-white/80 transition hover:border-gold hover:bg-white/[0.05] hover:text-white hover:shadow-lg hover:shadow-gold/10 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center gap-3 rounded-full border border-black/25 bg-black/[0.02] px-8 py-3 text-sm font-semibold uppercase tracking-[0.38em] text-black/80 transition hover:border-gold hover:bg-black/[0.05] hover:text-black hover:shadow-lg hover:shadow-gold/10 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <>
-                    <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white"></span>
+                    <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-white"></span>
                     Loading...
                   </>
                 ) : (

@@ -2,17 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Timeline", href: "/timeline" },
+  { label: "Stats", href: "/stats" },
+  { label: "Ideas", href: "/ideas" },
+  { label: "Beliefs", href: "/beliefs" },
+  { label: "Photos", href: "/photos" },
   { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,44 +32,70 @@ export function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const navElement = navRef.current;
+    if (!navElement) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      // Only handle wheel events when hovering over the nav
+      if (navElement.contains(e.target as Node)) {
+        e.preventDefault();
+        // Scroll down (positive deltaY) = scroll left (negative scrollLeft)
+        // Scroll up (negative deltaY) = scroll right (positive scrollLeft)
+        navElement.scrollLeft += e.deltaY;
+      }
+    };
+
+    navElement.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      navElement.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-ink/80 backdrop-blur-sm shadow-xl shadow-black/10" : "bg-transparent"
+        isScrolled ? "bg-ink/80 backdrop-blur-sm shadow-xl shadow-black/5" : "bg-transparent"
       }`}
     >
       <div className="section-container flex items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative h-12 w-12 overflow-hidden rounded-full border border-white/20 bg-white/5">
+          <div className="relative h-12 w-12 overflow-hidden rounded-full border border-black/20 bg-black/5">
             <Image
-              src="/GAV_Logo1_nobgWhite.png"
+              src="/GAV_Logo1_nobg.png"
               alt="Giang Anh Vu monogram"
               fill
               className="object-contain p-1"
               priority
             />
           </div>
-          <span className="font-serif text-2xl font-semibold tracking-[0.18em] uppercase text-white"></span>
+          <span className="font-serif text-2xl font-semibold tracking-[0.18em] uppercase text-black"></span>
         </Link>
 
-        <nav className="hidden items-center gap-10 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[0.95rem] font-semibold uppercase tracking-[0.32em] text-white/70 transition hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center gap-4 flex-1 min-w-0 ml-8 md:ml-16">
+          <nav 
+            ref={navRef}
+            className="flex items-center gap-10 overflow-x-auto scrollbar-hide max-w-[calc(100vw-24rem)] scroll-smooth"
+          >
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-[0.95rem] font-semibold uppercase tracking-[0.32em] text-black/70 transition hover:text-black whitespace-nowrap flex-shrink-0"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
           <Link
             href="/Giang_Anh_Vu_Resume.pdf"
             target="_blank"
-            className="rounded-full border border-white/30 px-6 py-2 text-sm font-semibold uppercase tracking-[0.38em] text-white transition hover:bg-white hover:text-ink"
+            className="rounded-full border border-black/30 px-6 py-2 text-sm font-semibold uppercase tracking-[0.38em] text-black transition hover:bg-black hover:text-white flex-shrink-0 ml-4"
           >
             Resume
           </Link>
-        </nav>
+        </div>
 
         <MobileMenu />
       </div>
@@ -93,14 +124,14 @@ function MobileMenu() {
         type="button"
         aria-label="Toggle navigation"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-black/20 bg-black/5"
       >
         <span className="sr-only">Toggle navigation</span>
         <div className="space-y-1.5">
           {[0, 1, 2].map((index) => (
             <span
               key={index}
-              className={`block h-0.5 w-6 origin-center transform bg-white transition duration-300 ${
+              className={`block h-0.5 w-6 origin-center transform bg-black transition duration-300 ${
                 open
                   ? index === 0
                     ? "translate-y-2 rotate-45"
@@ -128,7 +159,7 @@ function MobileMenu() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="text-lg font-semibold uppercase tracking-[0.4em] text-white/80 transition hover:text-white"
+              className="text-lg font-semibold uppercase tracking-[0.4em] text-black/80 transition hover:text-black"
             >
               {item.label}
             </Link>
@@ -137,7 +168,7 @@ function MobileMenu() {
             href="/Giang_Anh_Vu_Resume.pdf"
             target="_blank"
             onClick={() => setOpen(false)}
-            className="rounded-full border border-white/40 px-6 py-3 text-base font-semibold uppercase tracking-[0.4em] text-white transition hover:bg-white hover:text-ink"
+            className="rounded-full border border-black/40 px-6 py-3 text-base font-semibold uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
           >
             Resume
           </Link>

@@ -48,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark bg-ink text-white">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-ink text-white`}>
+    <html lang="en" className="bg-ink text-black">
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-ink text-black`}>
         <div className="relative min-h-screen">
           <Header />
           <main>{children}</main>

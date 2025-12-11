@@ -63,9 +63,9 @@ export default function ProjectsPage() {
     <div className="relative bg-ink py-28">
       <div className="section-container space-y-16">
         <header className="space-y-6 text-center md:text-left">
-          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-white/60">Signature Work</p>
-          <h1 className="font-serif text-4xl text-white sm:text-5xl">Projects</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-white/75 md:mx-0 md:text-xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">Signature Work</p>
+          <h1 className="font-serif text-4xl text-black sm:text-5xl">Projects</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
             A curated look at initiatives that blend rigorous engineering foundations with inviting, luxury-inspired experiences. Each project reflects a commitment to clarity, utility, and calm sophistication.
           </p>
         </header>
@@ -74,28 +74,28 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="rounded-3xl border border-white/10 bg-white/[0.02] p-12 transition hover:border-white/25 hover:bg-white/[0.05]"
+              className="rounded-3xl border border-black/10 bg-black/[0.02] p-12 transition hover:border-black/25 hover:bg-black/[0.05]"
             >
               <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
                 <div className="space-y-5 flex-1">
                   <div>
                     <div className="flex items-center gap-3">
-                      <p className="text-sm font-semibold uppercase tracking-[0.38em] text-white/55">Featured</p>
+                      <p className="text-sm font-semibold uppercase tracking-[0.38em] text-black/55">Featured</p>
                       {project.inProgress && (
                         <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
                           In Progress
                         </span>
                       )}
                     </div>
-                    <h2 className="mt-2 font-serif text-4xl text-white">{project.name}</h2>
-                    <p className="mt-4 text-base font-semibold uppercase tracking-[0.42em] text-white/55">{project.headline}</p>
+                    <h2 className="mt-2 font-serif text-4xl text-black">{project.name}</h2>
+                    <p className="mt-4 text-base font-semibold uppercase tracking-[0.42em] text-black/55">{project.headline}</p>
                   </div>
-                  <p className="max-w-2xl text-lg leading-8 text-white/75">{project.description}</p>
+                  <p className="max-w-2xl text-lg leading-8 text-black/75">{project.description}</p>
 
                   {project.name === "Lucentia" && (
                     <div className="mt-6 max-w-3xl">
-                      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.38em] text-white/55">Demo Video</p>
-                      <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
+                      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.38em] text-black/55">Demo Video</p>
+                      <div className="relative aspect-video overflow-hidden rounded-2xl border border-black/10 bg-black/[0.02]">
                         <video
                           src="/Lucentia_Demo.mp4"
                           controls
@@ -107,7 +107,7 @@ export default function ProjectsPage() {
                     </div>
                   )}
 
-                  <ul className="space-y-3 pl-6 text-lg text-white/70">
+                  <ul className="space-y-3 pl-6 text-lg text-black/70">
                     {project.contributions.map((point) => (
                       <li key={point} className="relative before:absolute before:-left-4 before:top-[10px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-gold/80">
                         {point}
@@ -119,7 +119,7 @@ export default function ProjectsPage() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full border border-white/15 bg-white/[0.05] px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.38em] text-white/45"
+                        className="rounded-full border border-black/15 bg-black/[0.05] px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.38em] text-black/45"
                       >
                         {tech}
                       </span>
@@ -130,7 +130,7 @@ export default function ProjectsPage() {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="group inline-flex items-center justify-center gap-3 self-start rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.38em] text-white/80 transition hover:border-gold hover:bg-white hover:text-ink"
+                  className="group inline-flex items-center justify-center gap-3 self-start rounded-full border border-black/25 px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.38em] text-black/80 transition hover:border-gold hover:bg-black hover:text-white"
                 >
                   View Project
                   <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

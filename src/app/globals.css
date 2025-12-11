@@ -5,16 +5,16 @@
 :root {
   --font-body: var(--font-inter);
   --font-heading: var(--font-playfair);
-  --color-background: #050608;
-  --color-background-soft: #0b0d11;
-  --color-foreground: #f7f5ef;
-  --color-muted: #bdb9ad;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-overlay: rgba(5, 6, 8, 0.62);
+  --color-background: #fcfcfc;
+  --color-background-soft: #f5f5f5;
+  --color-foreground: #000000;
+  --color-muted: #4a4a4a;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-overlay: rgba(252, 252, 252, 0.62);
   --color-accent: #d4af37;
   --color-accent-soft: rgba(212, 175, 55, 0.12);
-  --color-card: rgba(12, 14, 18, 0.78);
-  --color-card-border: rgba(255, 255, 255, 0.06);
+  --color-card: rgba(255, 255, 255, 0.78);
+  --color-card-border: rgba(0, 0, 0, 0.06);
   --edge-spacing: clamp(2rem, 2vw, 2rem);
 }
 
@@ -24,15 +24,15 @@
   }
 
   html {
-    color-scheme: dark;
+    color-scheme: light;
     scroll-behavior: smooth;
     background: var(--color-background);
   }
 
   body {
     background:
-      radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 45%),
-      radial-gradient(circle at bottom right, rgba(88, 76, 52, 0.18), transparent 55%),
+      radial-gradient(circle at top left, rgba(212, 175, 55, 0.05), transparent 45%),
+      radial-gradient(circle at bottom right, rgba(88, 76, 52, 0.08), transparent 55%),
       var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
@@ -44,11 +44,11 @@
 
   ::selection {
     background: rgba(212, 175, 55, 0.35);
-    color: #121212;
+    color: #000000;
   }
 
   a {
-    @apply outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent;
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-black/30 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent;
   }
 }
 
@@ -62,8 +62,8 @@
   }
 
   .surface-soft {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     backdrop-filter: blur(20px);
   }
@@ -181,5 +181,48 @@
 
   .bg-gold {
     background: var(--color-accent);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .flip-card {
+    perspective: 1000px;
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
   }
 }
