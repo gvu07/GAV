@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Mail, MapPin, Sparkles, Code, Database, TrendingUp, Award } from "lucide-react";
+import { ArrowUpRight, Code, Database, TrendingUp, Award } from "lucide-react";
 
 // Update the value below to swap the hero photo.
-// Test Commit 2
-const heroImage = "/Hero_Image7.png";
+const heroImage = "/Hero_Image10.jpg";
 
 const highlights = [
   {
@@ -70,14 +69,8 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 section-container flex flex-col items-center gap-8 text-center">
-          <div className="relative h-28 w-28 overflow-hidden rounded-full border border-black/30 bg-white/20 p-5 shadow-xl shadow-black/20 sm:h-32 sm:w-32">
-            <Image src="/GAV_Logo1_nobg.png" alt="Giang Anh Vu personal monogram" fill className="object-contain" priority />
-          </div>
           <div className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.4em] text-black/80"></p>
-            <h1 className="font-serif text-4xl tracking-[0.08em] text-black sm:text-5xl md:text-5xl">Giang Anh Vu</h1>
-            <p className="max-w-xl text-lg text-black/80 sm:text-xl">
-            </p>
+            <h1 className="font-serif text-4xl font-bold tracking-[0.08em] text-black/55 sm:text-5xl md:text-4xl">G Vu</h1>
           </div>
         </div>
       </section>
@@ -88,8 +81,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-8">
             <Award className="h-6 w-6 text-gold" />
             <p className="text-center text-base text-black/80 md:text-left">
-              <span className="font-semibold text-black">Currently:</span> Authoring research paper on ML-based geomagnetic event detection 
-              (target: Journal of Geophysical Research).
+              <span className="font-semibold text-black">Currently:</span> Authoring research paper on ML-based geomagnetic event detection
             </p>
           </div>
         </div>
@@ -110,67 +102,24 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-            <div className="space-y-6">
+          <div className="mx-auto max-w-4xl space-y-8">
+            <div className="text-center">
               <p className="text-base font-semibold uppercase tracking-[0.42em] text-black/60">My Introduction</p>
-              <h2 className="font-serif text-3xl text-black sm:text-4xl">
+              <h2 className="mt-4 font-serif text-3xl text-black sm:text-4xl">
                 Scholar | Creator | Innovator
               </h2>
-              <p className="max-w-2xl text-lg leading-8 text-black/75 sm:text-xl">
+            </div>
+            <div className="space-y-6 text-lg leading-8 text-black/75 sm:text-xl">
+              <p>
                 I'm a Computer Engineering student at the University of Michigan passionate about building solutions that bridge 
                 engineering rigor with human-centered design. My work spans machine learning research, full-stack development, 
                 and laboratory automation—always with a focus on creating meaningful impact.
               </p>
-              <p className="max-w-2xl text-lg leading-8 text-black/75 sm:text-xl">
+              <p>
                 Currently authoring my first research paper on ML-based space weather prediction, developing financial intelligence 
                 tools for startups, and contributing to space physics research at U-M's Magnetometer Laboratory. I bring precision, 
                 warmth, and a sense of narrative to every collaboration.
               </p>
-              <div className="flex flex-col gap-4 sm:flex-row">
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="rounded-3xl border border-black/10 bg-black/[0.03] p-8 backdrop-blur-xl">
-                <div className="flex items-center gap-4 text-black/80">
-                  <Sparkles className="h-10 w-10 text-gold" />
-                  <div>
-                    <p className="text-base font-semibold uppercase tracking-[0.45em] text-black/60">Currently</p>
-                    <p className="mt-2 text-lg text-black/75">
-                      Authoring research paper on ML-based geomagnetic event detection. Building Lucentia, a financial 
-                      intelligence platform. Contributing to space physics research at U-M's MagLab.
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-6 grid gap-4 text-lg text-black/70">
-                  <div className="flex items-start gap-3">
-                    <Mail className="mt-1 h-5 w-5 text-black/60" />
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@gianganhvu.com" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-black">
-                      contact@gianganhvu.com
-                    </a>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <MapPin className="mt-1 h-5 w-5 text-black/60" />
-                    <span>Washington, D.C. &amp; Ann Arbor, Michigan</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Open to Opportunities */}
-              <div className="rounded-3xl border border-gold/30 bg-gold/5 p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.4em] text-gold">Open to Opportunities</p>
-                <p className="mt-3 text-base text-black/90">
-                  Seeking summer 2025 internships in software engineering, research, or data science. 
-                  Available for remote or on-site positions in Ann Arbor, MI or Washington, D.C.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold transition hover:text-gold/80"
-                >
-                  Let's Connect
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -342,4 +291,3 @@ export default function HomePage() {
     </div>
   );
 }
-

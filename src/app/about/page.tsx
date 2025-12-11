@@ -14,7 +14,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg leading-8 text-black/75 sm:text-xl">
               <p>
-                I'm a Mechanical Engineering student at the University of Michigan with a passion for building solutions 
+                I'm a Computer Engineering student at the University of Michigan with a passion for building solutions 
                 that bridge technical excellence with human-centered design. Born in Ho Chi Minh City, Vietnam and raised 
                 in Maryland, I bring a unique perspective to every project—combining rigorous engineering principles with 
                 creative problem-solving.
