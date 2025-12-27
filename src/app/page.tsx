@@ -70,7 +70,7 @@ export default function HomePage() {
 
         <div className="relative z-10 section-container flex flex-col items-center gap-8 text-center">
           <div className="space-y-3">
-            <h1 className="font-serif text-4xl font-bold tracking-[0.08em] text-black/55 sm:text-5xl md:text-4xl"> G</h1>
+            <h1 className="font-serif text-4xl font-bold tracking-[0.08em] text-black/55 sm:text-5xl md:text-4xl"> </h1>
           </div>
         </div>
       </section>
