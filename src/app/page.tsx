@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Code, Database, TrendingUp, Award } from "lucide-react";
+import { ArrowUpRight, Code, Database, TrendingUp, Award, Wrench, Globe } from "lucide-react";
 
 // Update the value below to swap the hero photo.
 const heroImage = "/Hero_Image10.jpg";
@@ -9,7 +9,7 @@ const highlights = [
   {
     title: "Engineering Meets Design",
     description:
-      "Computer Engineering student at the University of Michigan translating complex systems into intuitive, elegant experiences.",
+      "Computer Engineering student at the University of Michigan I want to translate engineering into financial intelligence.",
   },
   {
     title: "Precision Through Craft",
@@ -44,14 +44,16 @@ const achievements = [
   { metric: "4.0 GPA", label: "University of Michigan" },
   { metric: "1", label: "Research Paper (in progress)" },
   { metric: "2+", label: "Production Projects" },
-  { metric: "3+", label: "Languages (in progress)" },
+  { metric: "3", label: "Natural Languages" },
 ];
 
 const skills = {
-  languages: ["Python", "TypeScript", "JavaScript", "MATLAB", "C++"],
+  languages: ["Python", "JavaScript", "MATLAB", "C++"],
   frameworks: ["Next.js", "React", "Flask", "scikit-learn", "Pandas"],
-  tools: ["Git", "PostgreSQL", "Docker", "Plotly", "NumPy"],
-  research: ["Machine Learning", "Data Analysis", "Space Physics", "Random Forest"],
+  tools: ["Git", "PostgreSQL", "Docker", "Plotly"],
+  engineering: ["SolidWorks", "Siemens NX", "Analog Discovery 2"],
+  research: ["Magnetometer Testing","Space Physics", "Data Analysis"],
+  naturalLanguages: ["English", "Vietnamese", "Spanish"], // Update with your actual languages
 };
 
 export default function HomePage() {
@@ -81,7 +83,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-8">
             <Award className="h-6 w-6 text-gold" />
             <p className="text-center text-base text-black/80 md:text-left">
-              <span className="font-semibold text-black">Currently:</span> Authoring research paper on ML-based geomagnetic event detection
+              <span className="font-semibold text-black">Currently:</span> Authoring a Research Paper on geomagnetic event detection using Machine Learning
             </p>
           </div>
         </div>
@@ -112,13 +114,14 @@ export default function HomePage() {
             <div className="space-y-6 text-lg leading-8 text-black/75 sm:text-xl">
               <p>
                 I'm a Computer Engineering student at the University of Michigan passionate about building solutions that bridge 
-                engineering rigor with human-centered design. My work spans machine learning research, full-stack development, 
-                and laboratory automation—always with a focus on creating meaningful impact.
+                engineering rigor with human-centered design. My work spans space physics research, machine learning data analysis, full-stack development, 
+                and laboratory automation. Always with a focus on creating meaningful impact.
               </p>
               <p>
-                Currently authoring my first research paper on ML-based space weather prediction, developing financial intelligence 
-                tools for startups, and contributing to space physics research at U-M's Magnetometer Laboratory. I bring precision, 
-                warmth, and a sense of narrative to every collaboration.
+                I'm currently authoring my first research paper on ML-based geomagnetic event detection and contributing to space physics research at U-M's Magnetometer Laboratory.
+                I'm also developing Lucentia, a FinTech platform that helps me manage my finances and will provide others with access to a personal financial advisor
+                available at any time. I hope to use this website to document my journey and share my experiences, personal identity, and ideas with others.
+                If you take inspiration from my work, please feel free to reach out to me and I'd be happy to chat about it.
               </p>
             </div>
           </div>
@@ -144,14 +147,14 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-[0.42em] text-black/60">Technical Expertise</p>
             <h2 className="mt-4 font-serif text-3xl text-black sm:text-4xl">Skills & Technologies</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-black/75">
-              A comprehensive toolkit spanning programming languages, frameworks, and research methodologies.
+              A comprehensive toolkit spanning my programming languages, frameworks, tools, engineering software, research, and spoken languages.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
               <Code className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Languages</h3>
+              <h3 className="mt-4 font-serif text-xl text-black">Programming Languages</h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {skills.languages.map((skill) => (
                   <span
@@ -195,10 +198,40 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
+              <Wrench className="h-8 w-8 text-gold" />
+              <h3 className="mt-4 font-serif text-xl text-black">Engineering</h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {skills.engineering.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
               <Award className="h-8 w-8 text-gold" />
               <h3 className="mt-4 font-serif text-xl text-black">Research</h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {skills.research.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
+              <Globe className="h-8 w-8 text-gold" />
+              <h3 className="mt-4 font-serif text-xl text-black">Natural Languages</h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {skills.naturalLanguages.map((skill) => (
                   <span
                     key={skill}
                     className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
@@ -259,10 +292,9 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden border-t border-black/10 bg-black/[0.04] py-24">
         <div className="section-container relative z-10 flex flex-col items-center gap-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.42em] text-black/65">Next step</p>
-          <h2 className="font-serif text-3xl text-black sm:text-4xl">Download my resume</h2>
+          <h2 className="font-serif text-3xl text-black sm:text-4xl">Interested in my work?</h2>
           <p className="max-w-2xl text-lg leading-8 text-black/75">
-            A concise look at experience, tools, and collaborations. Interested in working together? Let&apos;s chat.
+            A concise look at my experience, tools, and research. Let's Chat!
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
@@ -272,14 +304,12 @@ export default function HomePage() {
             >
               Download Resume
             </Link>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@gianganhvu.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-3 rounded-full border border-black/20 px-8 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-black/80 transition hover:border-black/50 hover:text-black"
             >
-              Email Me
-            </a>
+              Contact Me
+            </Link>
           </div>
         </div>
 
