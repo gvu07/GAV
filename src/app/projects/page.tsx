@@ -13,7 +13,7 @@ const projects = [
       "Currently improving model performance for SSC/SI differentiation and multi-latitude generalization while preparing comprehensive research paper integrating machine learning detection with multi-latitude statistical validation.",
       "Implemented feature importance analysis revealing physical signatures—SYM/H minimum and pre-event quietness—as primary discriminators, validating model against known geophysical processes and demonstrating interpretable ML for space physics.",
     ],
-    technologies: ["Machine Learning", "Random Forest", "Research"],
+    technologies: ["Machine Learning Python", "Random Forest", "Research"],
     link: "https://github.com/gvu07/predictionModel_SSC_SC",
     inProgress: true,
   },

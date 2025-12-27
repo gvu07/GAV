@@ -29,7 +29,7 @@ const featuredProjects = [
     description:
       "ML model achieving 94% accuracy for space weather prediction—enabling early warning systems that protect satellite infrastructure worth billions.",
     link: "https://github.com/gvu07/predictionModel_SSC_SC",
-    tags: ["Machine Learning", "Research", "Python"],
+    tags: ["Machine Learning Python", "Random Forest", "Research"],
   },
   {
     name: "Lucentia",
@@ -41,10 +41,10 @@ const featuredProjects = [
 ];
 
 const achievements = [
-  { metric: "94%", label: "ML Model Recall" },
-  { metric: "1", label: "Research Paper" },
-  { metric: "4+", label: "Production Projects" },
-  { metric: "60%", label: "Reduced Onboarding Time" },
+  { metric: "4.0 GPA", label: "University of Michigan" },
+  { metric: "1", label: "Research Paper (in progress)" },
+  { metric: "2+", label: "Production Projects" },
+  { metric: "3+", label: "Languages (in progress)" },
 ];
 
 const skills = {
