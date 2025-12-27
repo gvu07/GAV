@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const timelineItems = [
   {
     id: 1,
-    date: "2025-09-01",
+    date: "2025-09-02",
     title: "Lucentia",
     description: "Developing full-stack financial intelligence platform using Next.js, React, and PostgreSQL that classifies spending, detects anomalies, and reduces manual accounting time by 90%.",
     category: "Project",
@@ -15,7 +15,7 @@ const timelineItems = [
   },
   {
     id: 2,
-    date: "2025-09-01",
+    date: "2025-09-02",
     title: "UM Electric Boat",
     description: "Designing and manufacturing world record-fastest electric boat hull, optimizing efficiency and safety using SolidWorks and Siemens NX across engineering disciplines.",
     category: "Project",
@@ -23,7 +23,7 @@ const timelineItems = [
   },
   {
     id: 3,
-    date: "2025-08-01",
+    date: "2025-08-26",
     title: "Research Assistant at U-M Magnetometer Laboratory",
     description: "Developing ML models achieving 94% recall for geomagnetic storm prediction using Random Forest classifiers, enabling early warning systems for satellite infrastructure. Authoring research paper and analyzing magnetometer data to correlate solar events with geomagnetic fluctuations.",
     category: "Work",
@@ -31,11 +31,11 @@ const timelineItems = [
   },
   {
     id: 4,
-    date: "2025-05-01",
-    title: "Associate Degree Completion",
+    date: "2023-09-01",
+    title: "General Engineering Associate Degree Completion",
     description: "Earned Associate of Science in General Engineering from Montgomery College with GPA: 3.7/4.0.",
     category: "Education",
-    dateEnd: "2025-05-01"
+    dateEnd: "2025-05-31"
   },
   {
     id: 5,
@@ -151,7 +151,7 @@ export default function TimelinePage() {
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">My Journey</p>
           <h1 className="font-serif text-4xl text-black sm:text-5xl">Timeline</h1>
           <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
-            A chronological journey through key experiences, projects, and achievements that have shaped my path in engineering, research, and leadership.
+            A chronological journey through key experiences, projects, and achievements that have shaped my path trhough academics, leadership, and personal growth.
           </p>
         </header>
 

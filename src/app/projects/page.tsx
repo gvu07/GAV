@@ -41,7 +41,12 @@ export default function ProjectsPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">Signature Work</p>
           <h1 className="font-serif text-4xl text-black sm:text-5xl">Projects</h1>
           <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
-            A curated look at initiatives that blend rigorous engineering foundations with inviting, luxury-inspired experiences. Each project reflects a commitment to clarity, utility, and calm sophistication.
+            A look at some of my projects from academic research to personal development. 
+            I am open to collaboration and feedback on my projects, 
+            because I want to improve them.
+            I am open to collaboration and feedback on projects and ideas. 
+            I've made a page for my ideas, and you can view and read through some of my ideas
+            for projects or hobbies that I'm interested in working on.
           </p>
         </header>
 

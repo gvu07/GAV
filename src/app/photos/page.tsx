@@ -23,10 +23,10 @@ const photos: Photo[] = [
     id: 1,
     imagePath: "/Hero_Image1.jpeg",
     details: {
-      title: "Hero Image 1",
-      description: "A memorable moment captured",
-      date: "",
-      location: "",
+      title: "18th Birthday Art",
+      description: "A picture after a festival in D.C. for my 18th birthday",
+      date: "March 2025",
+      location: "Washington, D.C.",
       story: "",
       customFields: {}
     }
@@ -35,8 +35,8 @@ const photos: Photo[] = [
     id: 2,
     imagePath: "/mebro.png",
     details: {
-      title: "Me and My Brother",
-      description: "A special moment with my brother",
+      title: "My Brother & I",
+      description: "Christmas in Viet Nam with my brother",
       date: "",
       location: "",
       story: "",
@@ -47,10 +47,10 @@ const photos: Photo[] = [
     id: 3,
     imagePath: "/GAV_Image.jpeg",
     details: {
-      title: "Giang Anh Vu",
-      description: "A personal portrait",
-      date: "",
-      location: "",
+      title: "Seneca Rocks Summit",
+      description: "My first time summiting a mountain",
+      date: "December 2024",
+      location: "Seneca Rocks, West Virginia",
       story: "",
       customFields: {}
     }
@@ -60,9 +60,9 @@ const photos: Photo[] = [
     imagePath: "/SenecaRocks.png",
     details: {
       title: "Seneca Rocks",
-      description: "Exploring the beautiful landscape",
+      description: "The beautiful landscape of Seneca Rocks",
       date: "",
-      location: "Seneca Rocks",
+      location: "Seneca Rocks, West Virginia",
       story: "",
       customFields: {}
     }
@@ -71,10 +71,10 @@ const photos: Photo[] = [
     id: 5,
     imagePath: "/MeSis.png",
     details: {
-      title: "Me and My Sister",
-      description: "A cherished moment with my sister",
-      date: "",
-      location: "",
+      title: "My Sister's White Coat",
+      description: "My sister's white coat ceremony at University of Florida",
+      date: "June 2024",
+      location: "Gainesville, Florida",
       story: "",
       customFields: {}
     }
@@ -83,11 +83,11 @@ const photos: Photo[] = [
     id: 6,
     imagePath: "/MeFam.png",
     details: {
-      title: "Family Photo",
-      description: "A beautiful family moment",
-      date: "",
-      location: "",
-      story: "",
+      title: "My High School Graduation",
+      description: "My mom wearing my graduation cap & gown, and my dad wearing the awards that I was able to achieve become of their sacrifices and hard work,",
+      date: "May 2025",
+      location: "UMBC, Baltimore, Maryland",
+      story: "My parents didn't get to complete High School, so they know the importances of education",
       customFields: {}
     }
   }
@@ -131,10 +131,9 @@ export default function PhotosPage() {
     <div className="relative bg-ink py-28">
       <div className="section-container space-y-16">
         <header className="space-y-6 text-center md:text-left">
-          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">Visual Memories</p>
-          <h1 className="font-serif text-4xl text-black sm:text-5xl">Photos</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
-            A collection of moments, memories, and experiences. Hover over each photo to learn more.
+          <h1 className="font-serif text-4xl text-black sm:text-5xl">Photos of My Life</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-lg">
+            My collection of memories, moments, and experiences
           </p>
         </header>
 

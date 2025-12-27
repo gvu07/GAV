@@ -5,19 +5,19 @@ export default function AboutPage() {
       <div className="section-container space-y-20">
         <header className="space-y-6 text-center md:text-left">
           <h1 className="font-serif text-4xl text-black sm:text-5xl">About Me</h1>
+          <p className="text-lg leading-8 text-black/75 sm:text-lg">
+            My Story as a Person, a Vietnamese Immigrant, and an Engineering Student. (I am working on writing about my inspirations)
+          </p>
         </header>
 
         <div className="max-w-4xl space-y-8">
           <div className="space-y-6">
-            <h2 className="font-serif text-3xl text-black sm:text-4xl">
-              Scholar | Creator | Innovator
-            </h2>
-            <div className="space-y-6 text-lg leading-8 text-black/75 sm:text-xl">
+            <div className="space-y-6 text-lg leading-8 text-black sm:text-xl">
               <p>
                 I'm a Computer Engineering student at the University of Michigan with a passion for building solutions 
                 that bridge technical excellence with human-centered design. Born in Ho Chi Minh City, Vietnam and raised 
-                in Maryland, I bring a unique perspective to every project—combining rigorous engineering principles with 
-                creative problem-solving.
+                in Maryland, I hope to share my unique experiences and lessons that I've learned in my life to help others. 
+                I want to inspire and help others, doing what I can to make a difference in the world.
               </p>
               <p>
                 My work spans machine learning research, full-stack development, and laboratory automation. Currently, I'm 
