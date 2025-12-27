@@ -13,7 +13,7 @@ const projects = [
       "Currently improving model performance for SSC/SI differentiation and multi-latitude generalization while preparing comprehensive research paper integrating machine learning detection with multi-latitude statistical validation.",
       "Implemented feature importance analysis revealing physical signatures—SYM/H minimum and pre-event quietness—as primary discriminators, validating model against known geophysical processes and demonstrating interpretable ML for space physics.",
     ],
-    technologies: ["Python", "scikit-learn", "Random Forest", "Pandas", "NumPy", "Matplotlib"],
+    technologies: ["Machine Learning", "Random Forest", "Research"],
     link: "https://github.com/gvu07/predictionModel_SSC_SC",
     inProgress: true,
   },
@@ -27,34 +27,9 @@ const projects = [
       "Designed a polished interface that pairs luxury-inspired visuals with auditor-grade transparency, creating an intuitive experience that makes complex financial data accessible to non-technical founders.",
       "Built workflow automations enabling startups to reconcile days of data in minutes—reducing manual accounting time by over 90% and enabling faster financial decision-making.",
     ],
-    technologies: ["TypeScript", "Next.js", "PostgreSQL", "Tailwind"],
+    technologies: ["FinTech", "Data Engineering", "PostgreSQL"],
     link: "https://github.com/gvu07/Lucentia",
-  },
-  {
-    name: "MagLab Systems Dashboard",
-    headline: "Refined control for high-precision magnetometry research.",
-    description:
-      "A responsive dashboard enabling University of Michigan researchers to orchestrate instruments, analyze telemetry, and capture experimental logs. Consolidated disparate tools into a single secure portal, reducing onboarding time for new researchers by 60% and streamlining research workflows.",
-    contributions: [
-      "Collaborated with researchers to translate complex workflows into an intuitive, guided interface, improving instrument control efficiency and reducing user errors.",
-      "Implemented data visualizations that surface live trends and alert the team to anomalies in real time, enabling faster response to experimental issues and data quality problems.",
-      "Consolidated disparate tools into a single secure portal, reducing onboarding time for new researchers by 60% and enabling seamless collaboration across the research team.",
-    ],
-    technologies: ["React", "Python", "Flask", "Plotly"],
-    link: "https://space.engin.umich.edu/magnetometer-laboratory/",
-  },
-  {
-    name: "Journey Atelier",
-    headline: "Story-driven personal branding destination.",
-    description:
-      "An evolving microsite that pairs cinematic visuals, writing, and photography to share Giang Anh Vu’s ongoing learnings and creative process.",
-    contributions: [
-      "Crafted a multi-section layout that emphasises narrative pacing and high-end editorial polish.",
-      "Integrated responsive typography and ambient motion for a calm, luxurious feel on every device.",
-      "Automated deployment pipeline to Netlify with image optimisation and performance controls.",
-    ],
-    technologies: ["Next.js", "Framer Motion", "Sanity"],
-    link: "https://gianganhvu.com",
+    inProgress: true,
   },
 ];
 

@@ -6,13 +6,13 @@ import { useState, useEffect, useRef } from "react";
 
 const navItems = [
   { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
   { label: "Timeline", href: "/timeline" },
-  { label: "Stats", href: "/stats" },
+  { label: "Projects", href: "/projects" },
   { label: "Ideas", href: "/ideas" },
-  { label: "Beliefs", href: "/beliefs" },
-  { label: "Photos", href: "/photos" },
+  { label: "Stats", href: "/stats" },
   { label: "Contact", href: "/contact" },
+  { label: "Principles", href: "/principles" },
+  { label: "Photos", href: "/photos" },
 ];
 
 export function Header() {
