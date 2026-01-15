@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Briefcase, Github, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { ArrowUpRight, Briefcase, Github, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 
 const contactDetails = [
   {
@@ -31,11 +31,6 @@ const socialLinks = [
     icon: Github,
     label: "GitHub",
     href: "https://github.com/gvu07",
-  },
-  {
-    icon: Instagram,
-    label: "Instagram",
-    href: "https://www.instagram.com/gi.d.vu/",
   },
   {
     icon: Youtube,

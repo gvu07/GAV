@@ -3,7 +3,6 @@ import Link from "next/link";
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/giang-anh-d-vu/" },
   { label: "GitHub", href: "https://github.com/gvu07" },
-  { label: "Instagram", href: "https://www.instagram.com/gi.d.vu/" },
   { label: "YouTube", href: "https://www.youtube.com/@GiangAnhDVu" },
 ];
 
