@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Briefcase, Github, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 
 const contactDetails = [
   {
@@ -23,11 +23,6 @@ const contactDetails = [
 
 const socialLinks = [
   {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/giang-anh-d-vu/",
-  },
-  {
     icon: Github,
     label: "GitHub",
     href: "https://github.com/gvu07",
@@ -36,11 +31,6 @@ const socialLinks = [
     icon: Youtube,
     label: "YouTube",
     href: "https://www.youtube.com/@GiangAnhDVu",
-  },
-  {
-    icon: Briefcase,
-    label: "Handshake",
-    href: "https://umich.joinhandshake.com/profiles/gvu",
   },
 ];
 
@@ -100,6 +90,30 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col justify-between gap-10">
+            <a
+              href="https://www.linkedin.com/in/giang-anh-d-vu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col gap-4 rounded-3xl border-2 border-black/20 bg-black/[0.04] p-8 transition hover:border-black/40 hover:bg-black/[0.06]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-black/15 bg-black/[0.06] transition group-hover:bg-black/10">
+                  <Linkedin className="h-8 w-8 text-[#0A66C2]" />
+                </div>
+                <div>
+                  <h2 className="font-serif text-2xl text-black">LinkedIn</h2>
+                  <p className="text-sm text-black/60">Connect & see my full experience</p>
+                </div>
+              </div>
+              <p className="text-sm leading-7 text-black/70">
+                My primary professional profile—experience, recommendations, and updates. Best way to connect for opportunities and collaboration.
+              </p>
+              <span className="inline-flex w-fit items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-black/80 transition group-hover:text-black">
+                View my LinkedIn profile
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </a>
+
             <div className="space-y-6 rounded-3xl border border-black/10 bg-black/[0.02] p-10">
               <h2 className="font-serif text-2xl text-black">Message</h2>
               <p className="text-sm leading-7 text-black/60">
