@@ -6,28 +6,41 @@ const projects = [
     name: "MagLab Geomagnetic Event Prediction",
     headline: "Machine learning model for automated detection of Sudden Storm Commencements and Sudden Impulses.",
     description:
-      "Leading research and development of a Random Forest machine learning model that automatically detects geomagnetic events with high accuracy—enabling early warning systems for space weather that protect satellite infrastructure worth billions of dollars. Currently improving model performance and working on publishing a comprehensive research paper that combines statistical validation with ML-based detection, advancing space weather forecasting capabilities.",
+      "Co-authoring a research publication on a Random Forest ML model that automatically detects geomagnetic events—enabling early warning systems for space weather that protect satellite infrastructure. Analyzing 10+ years of magnetometer data and validating hardware reliability for spaceflight environments.",
     contributions: [
-      "Developed and trained Random Forest classifier achieving 88.9% recall and 88.9% precision for SSC detection using engineered features from SYM/H magnetometer data—significantly outperforming traditional threshold-based methods.",
-      "Engineered domain-specific features capturing pre-event quietness, compression amplitude, and ring current response to differentiate between storm commencements and impulses, enabling automated classification previously requiring manual expert analysis.",
-      "Currently improving model performance for SSC/SI differentiation and multi-latitude generalization while preparing comprehensive research paper integrating machine learning detection with multi-latitude statistical validation.",
-      "Implemented feature importance analysis revealing physical signatures—SYM/H minimum and pre-event quietness—as primary discriminators, validating model against known geophysical processes and demonstrating interpretable ML for space physics.",
+      "Developed Random Forest classifier achieving 80% recall for geomagnetic storm prediction using engineered features from SYM/H magnetometer data, outperforming traditional threshold-based methods.",
+      "Engineered domain-specific features capturing pre-event quietness, compression amplitude, and ring current response to differentiate between storm commencements and impulses.",
+      "Calibrate and maintain Helmholtz Coil apparatus for RM3100 sensor testing, validating hardware reliability for spaceflight environments.",
+      "Implemented feature importance analysis revealing physical signatures as primary discriminators, demonstrating interpretable ML for space physics.",
     ],
-    technologies: ["Machine Learning Python", "Random Forest", "Research"],
+    technologies: ["Python", "Scikit-learn", "Random Forest", "MATLAB"],
     link: "https://github.com/gvu07/predictionModel_SSC_SC",
     inProgress: true,
   },
   {
-    name: "Lucentia",
-    headline: "Financial intelligence for faster, clearer decisions.",
+    name: "GoFundMI.org",
+    headline: "Connecting student researchers to funding. Non-profit.",
     description:
-      "Leads product, data, and experience design for a platform that automates transaction insights, reveals anomalies, and empowers founders to trust their numbers. Enables startups to reconcile days of financial data in minutes, reducing manual accounting overhead and providing real-time visibility into spending patterns.",
+      "Collaborating with Curtis Ling (MaxLinear founder & CTO) to build a non-profit platform that connects student researchers to funding and enables donors direct access to ongoing university research.",
     contributions: [
-      "Architected modular TypeScript services that ingest and classify financial events with explainable outcomes, processing thousands of transactions with high accuracy and providing actionable insights.",
-      "Designed a polished interface that pairs luxury-inspired visuals with auditor-grade transparency, creating an intuitive experience that makes complex financial data accessible to non-technical founders.",
-      "Built workflow automations enabling startups to reconcile days of data in minutes—reducing manual accounting time by over 90% and enabling faster financial decision-making.",
+      "Co-designing the platform architecture using Python, React, and modern web technologies to serve the University of Michigan research community.",
+      "Building systems that enable transparent, direct funding pipelines between donors and student-led research projects.",
     ],
-    technologies: ["FinTech", "Data Engineering", "PostgreSQL"],
+    technologies: ["Python", "React", "Web Development"],
+    link: "#",
+    inProgress: true,
+  },
+  {
+    name: "Summa-Fi",
+    headline: "Secure, self-hosted financial intelligence.",
+    description:
+      "Engineering a secure, self-hosted financial platform that automates transaction classification, integrates real-time data via Plaid API, and provides dynamic visualization through React—reducing manual accounting workflows by 70%.",
+    contributions: [
+      "Architected Python backend services that ingest and classify financial events with explainable outcomes, processing thousands of transactions with actionable insights.",
+      "Integrated Plaid API for real-time financial data ingestion; PostgreSQL for persistent storage; React for dynamic, interactive visualization.",
+      "Built workflow automations reducing manual accounting time by 70% and providing real-time visibility into spending patterns.",
+    ],
+    technologies: ["Python", "React", "PostgreSQL", "Plaid API"],
     link: "https://github.com/gvu07/Lucentia",
     inProgress: true,
   },
@@ -41,12 +54,9 @@ export default function ProjectsPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">Signature Work</p>
           <h1 className="font-serif text-4xl text-black sm:text-5xl">Projects</h1>
           <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
-            A look at some of my projects from academic research to personal development. 
-            I am open to collaboration and feedback on my projects, 
-            because I want to improve them.
-            I am open to collaboration and feedback on projects and ideas. 
-            I've made a page for my ideas, and you can view and read through some of my ideas
-            for projects or hobbies that I'm interested in working on.
+            From ML-based space weather research to non-profit platform development, 
+            these projects reflect my commitment to building meaningful engineering solutions.
+            I&apos;m open to collaboration and feedback—reach out if any of this resonates.
           </p>
         </header>
 
@@ -72,7 +82,7 @@ export default function ProjectsPage() {
                   </div>
                   <p className="max-w-2xl text-lg leading-8 text-black/75">{project.description}</p>
 
-                  {project.name === "Lucentia" && (
+                  {project.name === "Summa-Fi" && (
                     <div className="mt-6 max-w-3xl">
                       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.38em] text-black/55">Demo Video</p>
                       <div className="relative aspect-video overflow-hidden rounded-2xl border border-black/10 bg-black/[0.02]">

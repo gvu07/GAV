@@ -7,67 +7,75 @@ import { useState, useEffect } from "react";
 const timelineItems = [
   {
     id: 1,
-    date: "2025-09-02",
-    title: "Lucentia",
-    description: "Developing full-stack financial intelligence platform using Next.js, React, and PostgreSQL that classifies spending, detects anomalies, and reduces manual accounting time by 90%.",
+    date: "2026-02-01",
+    title: "GoFundMI.org — Non-Profit",
+    description: "Collaborating with Curtis Ling (MaxLinear founder & CTO) to build a non-profit platform connecting student researchers to funding and enabling donors direct access to university research.",
     category: "Project",
     dateEnd: null
   },
   {
     id: 2,
-    date: "2025-09-02",
-    title: "UM Electric Boat",
-    description: "Designing and manufacturing world record-fastest electric boat hull, optimizing efficiency and safety using SolidWorks and Siemens NX across engineering disciplines.",
-    category: "Project",
+    date: "2026-01-01",
+    title: "Founder & Electrical Lead — U-M Vertical Flight",
+    description: "Founded multidisciplinary eVTOL design team competing in Vertical Flight Society design-build-fly competitions. Leading electrical systems design: power distribution, flight controllers, and sensor integration (LiDAR, thermal). Secured $20k+ in funding.",
+    category: "Work",
     dateEnd: null
   },
   {
     id: 3,
-    date: "2025-08-26",
-    title: "Research Assistant at U-M Magnetometer Laboratory",
-    description: "Developing ML models achieving 94% recall for geomagnetic storm prediction using Random Forest classifiers, enabling early warning systems for satellite infrastructure. Authoring research paper and analyzing magnetometer data to correlate solar events with geomagnetic fluctuations.",
-    category: "Work",
+    date: "2025-09-01",
+    title: "Summa-Fi — Financial Platform",
+    description: "Engineering a secure, self-hosted financial platform using Python and React to automate transaction classification, integrating Plaid API and PostgreSQL—reducing manual accounting workflows by 70%.",
+    category: "Project",
     dateEnd: null
   },
   {
     id: 4,
-    date: "2023-09-01",
-    title: "General Engineering Associate Degree Completion",
-    description: "Earned Associate of Science in General Engineering from Montgomery College with GPA: 3.7/4.0.",
-    category: "Education",
-    dateEnd: "2025-05-31"
+    date: "2025-08-26",
+    title: "Research Assistant — U-M Magnetometer Laboratory",
+    description: "Developing Random Forest ML models achieving 80% recall for geomagnetic storm prediction. Analyzing 10+ years of magnetometer data and co-authoring a research publication. Calibrating Helmholtz Coil apparatus for RM3100 sensor testing.",
+    category: "Research",
+    dateEnd: null
   },
   {
     id: 5,
-    date: "2024-08-01",
-    title: "Phi Theta Kappa Vice President",
-    description: "Elected Vice President of Phi Theta Kappa College Honor Society at Montgomery College, coordinating events engaging 400+ honor society members and representing chapter at regional meetings.",
-    category: "Leadership",
-    dateEnd: "2025-06-30"
+    date: "2025-08-01",
+    title: "University of Michigan — Computer Engineering",
+    description: "Enrolled in BSE Computer Engineering at the University of Michigan. 4.0 GPA. Martin & Ellen Chavez Scholarship Winner. Dean's List. Coursework: Programming and Data Structures, Electrical Circuits, Solid Mechanics.",
+    category: "Education",
+    dateEnd: null
   },
   {
     id: 6,
-    date: "2024-05-01",
-    title: "Mathnasium Math Instructor",
-    description: "Instructed K-12 students in Calculus I–III for AP exam preparation; developed personalized learning plans to improve mathematical reasoning and STEM interest.",
-    category: "Work",
+    date: "2024-08-01",
+    title: "Vice President — Phi Theta Kappa Honor Society",
+    description: "Orchestrated 5+ large-scale events for 400-member honor society at Montgomery College, increasing member engagement and representing chapter at regional conferences.",
+    category: "Leadership",
     dateEnd: "2025-06-30"
   },
   {
     id: 7,
+    date: "2024-05-01",
+    title: "Math Instructor — Mathnasium",
+    description: "Instructed AP Calculus and Physics prep with personalized learning plans—90% of students scored 4+. Mentored SAT Math students to 100+ point average increases.",
+    category: "Work",
+    dateEnd: "2025-06-30"
+  },
+  {
+    id: 8,
     date: "2023-12-01",
-    title: "Student Government Association Treasurer",
-    description: "Elected Treasurer of Montgomery College Student Government Association, managing $40,000 budget, overseeing financial allocations for 40+ student organizations and approving $28,000+ in resources.",
+    title: "Treasurer — Student Government Association",
+    description: "Administered $40,000 annual budget for 40+ student organizations at Montgomery College; approved $28,000+ in resource allocations through weekly proposal hearings.",
     category: "Leadership",
     dateEnd: "2024-06-30"
   },
   {
-    id: 8,
-    date: "2023-02-01",
-    title: "AWS Powered Autonomous Robot Car",
-    description: "Programmed reward functions in Python for autonomous navigation; designed collision-resistant outer shell using Creo Parametric.",
-    category: "Project",
-    dateEnd: "2023-06-30"
+    id: 9,
+    date: "2023-09-01",
+    title: "Montgomery College — General Engineering",
+    description: "Earned Associate of Science in General Engineering from Montgomery College. GPA: 3.7/4.0.",
+    category: "Education",
+    dateEnd: "2025-05-31"
   },
 ];
 
@@ -75,27 +83,14 @@ const ITEMS_PER_PAGE = 5;
 
 function formatDate(dateString: string, dateEnd?: string | null): string {
   const date = new Date(dateString);
-  const formattedDate = date.toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  });
-  
+  const fmt = (d: Date) =>
+    d.toLocaleDateString("en-US", { year: "numeric", month: "short" });
+
   if (dateEnd) {
-    const endDate = new Date(dateEnd);
-    const formattedEndDate = endDate.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-    return `${formattedDate} – ${formattedEndDate}`;
+    return `${fmt(date)} – ${fmt(new Date(dateEnd))}`;
   }
-  
-  return dateString === new Date().toISOString().split('T')[0] 
-    ? `Currently (since ${formattedDate})`
-    : date >= new Date() 
-    ? `Starting ${formattedDate}`
-    : `Since ${formattedDate}`;
+
+  return `${fmt(date)} – Present`;
 }
 
 function getCategoryColor(category: string): string {
@@ -151,7 +146,7 @@ export default function TimelinePage() {
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-black/60">My Journey</p>
           <h1 className="font-serif text-4xl text-black sm:text-5xl">Timeline</h1>
           <p className="mx-auto max-w-3xl text-lg leading-8 text-black/75 md:mx-0 md:text-xl">
-            A chronological journey through key experiences, projects, and achievements that have shaped my path trhough academics, leadership, and personal growth.
+            A chronological journey through key experiences, projects, and achievements that have shaped my path through academics, research, and engineering.
           </p>
         </header>
 
@@ -170,7 +165,7 @@ export default function TimelinePage() {
               >
                 {/* Timeline dot */}
                 <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2">
-                  <div className="h-5 w-5 rounded-full border-3 border-gold bg-gold/20 ring-4 ring-ink shadow-lg shadow-gold/20 transition-transform group-hover:scale-125"></div>
+                  <div className="h-5 w-5 rounded-full border-2 border-gold bg-gold/20 ring-4 ring-ink shadow-lg shadow-gold/20"></div>
                 </div>
 
                 {/* Content card */}

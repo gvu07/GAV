@@ -1,4 +1,7 @@
+'use client';
+
 import Link from "next/link";
+import { ArrowUp } from "lucide-react";
 
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/giang-anh-d-vu/" },
@@ -9,13 +12,17 @@ const socials = [
 export function Footer() {
   const year = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="border-t border-black/10 bg-ink py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-serif text-2xl text-black/90">Let&apos;s create</p>
+          <p className="font-serif text-2xl text-black/90">Let&apos;s build something.</p>
           <p className="mt-3 max-w-md text-sm text-black/50">
-            Based in Washington, D.C. and Ann Arbor, MI
+            Based in Ann Arbor, MI and Washington, D.C.
           </p>
         </div>
 
@@ -38,9 +45,18 @@ export function Footer() {
         </div>
       </div>
 
-      <p className="mt-10 text-center text-xs uppercase tracking-[0.4em] text-black/60">
-        © {year} Giang Anh Vu
-      </p>
+      <div className="mx-auto mt-10 flex max-w-6xl items-center justify-between px-6">
+        <p className="text-xs uppercase tracking-[0.4em] text-black/40">
+          &copy; {year} Giang Anh Vu
+        </p>
+        <button
+          onClick={scrollToTop}
+          className="group flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-black/40 transition hover:text-black"
+        >
+          Back to top
+          <ArrowUp className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5" />
+        </button>
+      </div>
     </footer>
   );
 }

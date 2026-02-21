@@ -23,6 +23,11 @@ const contactDetails = [
 
 const socialLinks = [
   {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/giang-anh-d-vu/",
+  },
+  {
     icon: Github,
     label: "GitHub",
     href: "https://github.com/gvu07",
@@ -135,7 +140,7 @@ export default function ContactPage() {
               <p className="text-sm text-black/60">
                 Follow along for behind-the-scenes experiments, learning, and inspiration.
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 {socialLinks.map((social) => (
                   <Link
                     key={social.label}

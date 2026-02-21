@@ -3,80 +3,62 @@ import { ArrowUpRight, Briefcase, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Student Researcher",
-    org: "University of Michigan College of Engineering",
-    type: "Part-time",
-    period: "Aug 2025 - Present · 7 mos",
-    location: "Ann Arbor, Michigan, United States · On-site",
+    title: "Founder & Electrical Lead",
+    org: "U-M Vertical Flight",
+    type: "Project Team",
+    period: "Jan 2026 – Present",
+    location: "Ann Arbor, Michigan · On-site",
     bullets: [
-      "Develop ML models achieving 94% recall for geomagnetic storm prediction using Random Forest classifiers, enabling early warning systems for satellite infrastructure; authoring research paper soon to be published.",
-      "Analyze magnetometer data to correlate solar events with geomagnetic fluctuations; research material properties for optimal sensor selection on NASA missions.",
-      "Calibrate and maintain Helmholtz Coil apparatus for RM3100 sensor testing.",
+      "Founded multidisciplinary eVTOL design team competing in Vertical Flight Society design-build-fly competitions (search-and-rescue, surveillance, UAM); secured $20k+ in funding and sponsorships.",
+      "Lead electrical systems design: power distribution, flight controllers, sensor integration (LiDAR, thermal) for autonomous VTOL quadcopters and hybrid-wing drones.",
     ],
-    skills: ["Scholarly Research", "Python", "Mathematics", "+2 skills"],
+    skills: ["eVTOL Design", "Electrical Systems", "LiDAR", "Leadership"],
   },
   {
-    title: "Mathematics Teacher",
-    org: "Mathnasium - The Math Learning Center of 100+ students K-12",
+    title: "Research Assistant",
+    org: "U-M Magnetometer Laboratory",
     type: "Part-time",
-    period: "May 2024 - Jun 2025 · 1 yr 2 mos",
+    period: "Aug 2025 – Present",
+    location: "Ann Arbor, Michigan · On-site",
+    bullets: [
+      "Develop Random Forest ML models achieving 80% recall for geomagnetic storm prediction; analyze 10+ years of magnetometer data; co-author publication enabling novel early warning systems.",
+      "Calibrate and maintain Helmholtz Coil apparatus for RM3100 sensor testing, validating hardware reliability for spaceflight environments.",
+    ],
+    skills: ["Python", "Scikit-learn", "Research", "MATLAB"],
+  },
+  {
+    title: "Math Instructor",
+    org: "Mathnasium",
+    type: "Part-time",
+    period: "May 2024 – Jun 2025",
     location: "Clarksville, MD · On-site",
     bullets: [
-      "Tutor & customize curriculum for students in math, improved students grades and understanding.",
-      "Helped prepare high school students for SAT/ACT Math.",
+      "Instructed students in AP Calculus and Physics preparation through personalized learning plans, leading to 90% of students achieving a score of 4 or higher.",
+      "Mentored high school students in SAT Math, resulting in an average score increase of 100+ points and improved mastery of algebraic concepts.",
     ],
-    skills: ["Teaching", "Problem Solving", "+2 skills"],
+    skills: ["Teaching", "Calculus", "SAT Prep", "Mentorship"],
   },
   {
-    title: "Vice President Phi Theta Kappa (Alpha Chi Eta Chapter)",
-    org: "Montgomery College",
-    type: "Part-time",
-    period: "Aug 2024 - May 2025 · 10 mos",
-    location: "Rockville, Maryland, United States · Hybrid",
+    title: "Vice President",
+    org: "Phi Theta Kappa International College Honor Society · Montgomery College",
+    type: "Leadership",
+    period: "Aug 2024 – Jun 2025",
+    location: "Rockville, Maryland · Hybrid",
     bullets: [
-      "Elected to lead the Alpha Chi Eta chapter of the international honor society, overseeing strategic initiatives for a high-achieving student body.",
+      "Orchestrated 5+ large-scale events for 400-member honor society, increasing member engagement and representing chapter at regional conferences.",
     ],
-    skills: ["Large-Scale Event Coordination", "Member Recruitment & Engagement"],
+    skills: ["Event Coordination", "Member Engagement", "Leadership"],
   },
   {
-    title: "Treasurer of Student Government Association",
-    org: "Montgomery College",
-    type: "Seasonal",
-    period: "Dec 2023 - Oct 2024 · 11 mos",
-    location: "51 Mannakee St, Rockville, MD 20850",
+    title: "Treasurer",
+    org: "Montgomery College Student Government Association",
+    type: "Leadership",
+    period: "Dec 2023 – Jun 2024",
+    location: "Rockville, Maryland",
     bullets: [
-      "Managed $40,000 budget, overseeing financial allocations for 40+ student organizations; approved $28,000+ in resources through bi-weekly meetings.",
+      "Administered $40,000 annual budget for 40+ student organizations; exercised fiscal oversight to approve $28,000+ in resource allocations through weekly proposal hearings.",
     ],
-    skills: ["Networking", "Accounting", "+3 skills"],
-  },
-  {
-    title: "Team Member",
-    org: "Domino's",
-    type: "Part-time",
-    period: "Feb 2023 - Feb 2024 · 1 yr 1 mo",
-    location: "Gaithersburg, Maryland, United States · On-site",
-    bullets: [
-      "Using teamwork and Point of Sale (POS) Systems to make pizzas for customers and ensure they have a good experience. Memorizing recipes and managing inventory.",
-    ],
-    skills: ["Teamwork", "Point of Sale", "+2 skills"],
-  },
-  {
-    title: "SMOB Board Member",
-    org: "Montgomery County Public Schools",
-    type: "Seasonal",
-    period: "Oct 2021 - Jun 2023 · 1 yr 9 mos",
-    location: "Montgomery County, Maryland, United States",
-    bullets: [],
-    skills: ["Team Leadership", "Leadership Development"],
-  },
-  {
-    title: "Guest Safety & Operations Associate",
-    org: "City of Gaithersburg",
-    type: "Seasonal",
-    period: "May 2022 - Sep 2022 · 5 mos",
-    location: "Gaithersburg, Maryland, United States · On-site",
-    bullets: [],
-    skills: ["Safety Compliance", "Incident Management", "+1 skill"],
+    skills: ["Budgeting", "Fiscal Oversight", "Accounting"],
   },
 ];
 
@@ -85,10 +67,10 @@ export default function ExperiencePage() {
     <div className="relative bg-ink py-28">
       <div className="section-container space-y-16">
         <header className="space-y-6 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.45em] text-black/50">Roles · Leadership · Research</p>
+          <p className="text-xs uppercase tracking-[0.45em] text-black/50">Engineering · Research · Leadership</p>
           <h1 className="font-serif text-4xl text-black sm:text-5xl">Experience</h1>
           <p className="mx-auto max-w-3xl text-sm leading-7 text-black/60 md:mx-0 md:text-base">
-            Professional and leadership experience from my LinkedIn—research, teaching, student government, and operations.
+            Engineering leadership, research, and professional experience spanning eVTOL design, space physics, and community impact.
           </p>
           <a
             href="https://www.linkedin.com/in/giang-anh-d-vu/"
@@ -102,10 +84,16 @@ export default function ExperiencePage() {
         </header>
 
         <div className="space-y-8">
-          {experiences.map((exp, i) => (
+          {experiences.map((exp, i) => {
+            const isCurrent = exp.period.includes("Present");
+            return (
             <article
               key={`${exp.title}-${exp.org}-${i}`}
-              className="rounded-3xl border border-black/10 bg-black/[0.02] p-8 md:p-10 backdrop-blur-xl transition hover:border-black/15"
+              className={`rounded-3xl border bg-black/[0.02] p-8 md:p-10 backdrop-blur-xl transition hover:border-black/15 ${
+                isCurrent
+                  ? "border-l-4 border-l-gold border-black/10"
+                  : "border-black/10"
+              }`}
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="space-y-2">
@@ -144,7 +132,8 @@ export default function ExperiencePage() {
                 </div>
               )}
             </article>
-          ))}
+            );
+          })}
         </div>
 
         <div className="rounded-3xl border border-black/10 bg-black/[0.03] p-8 text-center">

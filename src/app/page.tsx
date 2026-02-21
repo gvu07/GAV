@@ -1,25 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Code, Database, TrendingUp, Award, Wrench, Globe } from "lucide-react";
+import { ArrowUpRight, Code, Database, TrendingUp, Award, Wrench, Globe, ChevronDown, type LucideIcon } from "lucide-react";
 
-// Update the value below to swap the hero photo.
 const heroImage = "/Hero_Image10.jpg";
 
 const highlights = [
   {
-    title: "Engineering Meets Design",
+    title: "Engineering Meets Autonomy",
     description:
-      "Computer Engineering student at the University of Michigan I want to translate engineering into financial intelligence.",
+      "From founding an eVTOL design team to ML-based space weather prediction, I build systems that operate at the edge of hardware and intelligence.",
   },
   {
     title: "Precision Through Craft",
     description:
-      "From laboratory automation to creative tooling, every project balances technical rigor with polished presentation.",
+      "From laboratory calibration to financial analytics, every project balances technical rigor with polished, human-centered design.",
   },
   {
-    title: "Community & Storytelling",
+    title: "Community & Impact",
     description:
-      "Documenting growth on social platforms, inviting others into the journey of continual improvement and curiosity.",
+      "Co-building a non-profit to connect student researchers with funding, leading honor societies, and documenting the journey along the way.",
   },
 ];
 
@@ -27,34 +26,41 @@ const featuredProjects = [
   {
     name: "MagLab Geomagnetic Event Prediction",
     description:
-      "ML model achieving 94% accuracy for space weather prediction—enabling early warning systems that protect satellite infrastructure worth billions.",
+      "Random Forest ML model achieving 80% recall for geomagnetic storm prediction—co-authoring a publication enabling early warning systems for satellite infrastructure.",
     link: "https://github.com/gvu07/predictionModel_SSC_SC",
-    tags: ["Machine Learning Python", "Random Forest", "Research"],
+    tags: ["Python", "Machine Learning", "Research"],
   },
   {
-    name: "Lucentia",
+    name: "GoFundMI.org",
     description:
-      "Automated financial intelligence that classifies spending, uncovers anomalies, and empowers smarter decisions—reducing manual accounting time by 90%.",
+      "Non-profit platform connecting student researchers to funding and enabling donors direct access to ongoing university research. Collaborating with Curtis Ling (MaxLinear founder & CTO).",
+    link: "#",
+    tags: ["Python", "React", "Non-Profit"],
+  },
+  {
+    name: "Summa-Fi",
+    description:
+      "Self-hosted financial platform automating transaction classification with Plaid API integration and real-time visualization—reducing manual accounting workflows by 70%.",
     link: "https://github.com/gvu07/Lucentia",
-    tags: ["TypeScript", "Data Engineering", "Fintech"],
+    tags: ["Python", "React", "PostgreSQL"],
   },
 ];
 
 const achievements = [
-  { metric: "4.0 GPA", label: "University of Michigan" },
-  { metric: "1", label: "Research Paper (in progress)" },
-  { metric: "2+", label: "Production Projects" },
+  { metric: "4.0", label: "GPA · University of Michigan" },
+  { metric: "1", label: "Research Publication (co-authoring)" },
+  { metric: "3", label: "Active Projects" },
   { metric: "3", label: "Natural Languages" },
 ];
 
-const skills = {
-  languages: ["Python", "JavaScript", "MATLAB", "C++"],
-  frameworks: ["Next.js", "React", "Flask", "scikit-learn", "Pandas"],
-  tools: ["Git", "PostgreSQL", "Docker", "Plotly"],
-  engineering: ["SolidWorks", "Siemens NX", "Analog Discovery 2"],
-  research: ["Magnetometer Testing","Space Physics", "Data Analysis"],
-  naturalLanguages: ["English", "Vietnamese", "Spanish"], // Update with your actual languages
-};
+const skillCategories: { label: string; icon: LucideIcon; items: string[] }[] = [
+  { label: "Programming Languages", icon: Code, items: ["Python", "C++", "MATLAB", "HTML/CSS"] },
+  { label: "Frameworks & Libraries", icon: Database, items: ["React", "Next.js", "Pandas", "Scikit-learn"] },
+  { label: "Tools & Platforms", icon: TrendingUp, items: ["Git", "PostgreSQL", "Docker", "Plaid API"] },
+  { label: "Engineering Software", icon: Wrench, items: ["SolidWorks", "Siemens NX", "Analog Discovery 2"] },
+  { label: "Research", icon: Award, items: ["Magnetometer Calibration", "Space Physics", "Data Analysis"] },
+  { label: "Natural Languages", icon: Globe, items: ["English", "Vietnamese", "Spanish"] },
+];
 
 export default function HomePage() {
   return (
@@ -68,12 +74,29 @@ export default function HomePage() {
             priority
             className="object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/20" />
         </div>
 
-        <div className="relative z-10 section-container flex flex-col items-center gap-8 text-center">
-          <div className="space-y-3">
-            <h1 className="font-serif text-4xl font-bold tracking-[0.08em] text-black/55 sm:text-5xl md:text-4xl"> </h1>
+        <div className="relative z-10 section-container flex flex-col items-center gap-6 text-center">
+          <h1 className="font-serif text-5xl font-bold tracking-[0.06em] text-white sm:text-6xl md:text-7xl">Giang Anh Vu</h1>
+          <div className="mt-4 flex gap-4">
+            <Link
+              href="/projects"
+              className="rounded-full border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white backdrop-blur-sm transition hover:bg-white hover:text-black"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-full border border-white/20 px-7 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white/80 backdrop-blur-sm transition hover:border-white/50 hover:text-white"
+            >
+              Get in Touch
+            </Link>
           </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="h-6 w-6 text-white/50" />
         </div>
       </section>
 
@@ -83,7 +106,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-8">
             <Award className="h-6 w-6 text-gold" />
             <p className="text-center text-base text-black/80 md:text-left">
-              <span className="font-semibold text-black">Currently:</span> Authoring a Research Paper on geomagnetic event detection using Machine Learning
+              <span className="font-semibold text-black">Currently:</span> Founding U-M Vertical Flight · Co-authoring a research publication on ML-based geomagnetic event detection · Chavez Scholarship Winner & Dean&apos;s List
             </p>
           </div>
         </div>
@@ -106,22 +129,22 @@ export default function HomePage() {
 
           <div className="mx-auto max-w-4xl space-y-8">
             <div className="text-center">
-              <p className="text-base font-semibold uppercase tracking-[0.42em] text-black/60">My Introduction</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.42em] text-black/50">Who I Am</p>
               <h2 className="mt-4 font-serif text-3xl text-black sm:text-4xl">
-                Scholar | Creator | Innovator
+                Engineer · Researcher · Builder
               </h2>
             </div>
             <div className="space-y-6 text-lg leading-8 text-black/75 sm:text-xl">
               <p>
-                I'm a Computer Engineering student at the University of Michigan passionate about building solutions that bridge 
-                engineering rigor with human-centered design. My work spans space physics research, machine learning data analysis, full-stack development, 
-                and laboratory automation. Always with a focus on creating meaningful impact.
+                I&apos;m a Computer Engineering student at the University of Michigan passionate about building systems 
+                at the intersection of hardware, software, and autonomy. My work spans eVTOL aircraft design, space physics 
+                research, machine learning, full-stack development, and laboratory instrumentation.
               </p>
               <p>
-                I'm currently authoring my first research paper on ML-based geomagnetic event detection and contributing to space physics research at U-M's Magnetometer Laboratory.
-                I'm also developing Lucentia, a FinTech platform that helps me manage my finances and will provide others with access to a personal financial advisor
-                available at any time. I hope to use this website to document my journey and share my experiences, personal identity, and ideas with others.
-                If you take inspiration from my work, please feel free to reach out to me and I'd be happy to chat about it.
+                I founded U-M Vertical Flight, a multidisciplinary design team competing in Vertical Flight Society 
+                design-build-fly competitions. I&apos;m co-authoring a research publication on ML-based geomagnetic event 
+                detection at U-M&apos;s Magnetometer Laboratory, and collaborating with Curtis Ling (MaxLinear founder & CTO) 
+                to build GoFundMI.org, a non-profit connecting student researchers to funding.
               </p>
             </div>
           </div>
@@ -152,95 +175,22 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
-              <Code className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Programming Languages</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skills.languages.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            {skillCategories.map((category) => (
+              <div key={category.label} className="rounded-2xl border border-black/10 bg-black/[0.02] p-6 transition hover:border-black/20 hover:bg-black/[0.04]">
+                <category.icon className="h-8 w-8 text-gold" />
+                <h3 className="mt-4 font-serif text-xl text-black">{category.label}</h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {category.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
-              <Database className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Frameworks</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skills.frameworks.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
-              <TrendingUp className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Tools</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skills.tools.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
-              <Wrench className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Engineering</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skills.engineering.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
-              <Award className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Research</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skills.research.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-black/10 bg-black/[0.02] p-6">
-              <Globe className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-serif text-xl text-black">Natural Languages</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {skills.naturalLanguages.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-black/15 bg-black/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black/60"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -261,7 +211,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project) => (
               <Link
                 key={project.name}
@@ -292,9 +242,9 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden border-t border-black/10 bg-black/[0.04] py-24">
         <div className="section-container relative z-10 flex flex-col items-center gap-8 text-center">
-          <h2 className="font-serif text-3xl text-black sm:text-4xl">Interested in my work?</h2>
+          <h2 className="font-serif text-3xl text-black sm:text-4xl">Interested in working together?</h2>
           <p className="max-w-2xl text-lg leading-8 text-black/75">
-            A concise look at my experience, tools, and research. Let's Chat!
+            Whether it&apos;s a research collaboration, a project idea, or just a conversation — I&apos;d love to hear from you.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link

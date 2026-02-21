@@ -19,11 +19,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Giang Anh Vu",
   description:
-    "Giang Anh Vu — crafting refined digital experiences with engineering precision and a designer's eye.",
+    "Giang Anh Vu — Computer Engineering at the University of Michigan. eVTOL design, ML research, and full-stack development.",
   openGraph: {
     title: "Giang Anh Vu",
     description:
-      "Explore projects, passions, and ways to collaborate with Giang Anh Vu.",
+      "Computer Engineering at U-M. Founding Vertical Flight, ML research, and engineering projects.",
     images: [
       {
         url: "/GAV_Image.jpeg",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Giang Anh Vu",
     description:
-      "Explore projects, passions, and ways to collaborate with Giang Anh Vu.",
+      "Computer Engineering at U-M. Founding Vertical Flight, ML research, and engineering projects.",
     images: ["/GAV_Image.jpeg"],
   },
 };

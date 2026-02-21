@@ -2,23 +2,25 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Experience", href: "/experience" },
-  { label: "Timeline", href: "/timeline" },
   { label: "Projects", href: "/projects" },
+  { label: "Timeline", href: "/timeline" },
   { label: "Ideas", href: "/ideas" },
-  { label: "Stats", href: "/stats" },
   { label: "Contact", href: "/contact" },
-  { label: "Principles", href: "/principles" },
+  { label: "Stats", href: "/stats" },
   { label: "Photos", href: "/photos" },
+  { label: "Principles", href: "/principles" },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,11 +40,8 @@ export function Header() {
     if (!navElement) return;
 
     const handleWheel = (e: WheelEvent) => {
-      // Only handle wheel events when hovering over the nav
       if (navElement.contains(e.target as Node)) {
         e.preventDefault();
-        // Scroll down (positive deltaY) = scroll left (negative scrollLeft)
-        // Scroll up (negative deltaY) = scroll right (positive scrollLeft)
         navElement.scrollLeft += e.deltaY;
       }
     };
@@ -61,50 +60,56 @@ export function Header() {
       }`}
     >
       <div className="section-container flex items-center justify-between py-5">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="relative h-12 w-12 overflow-hidden rounded-full border border-black/20 bg-black/5">
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <div className="relative h-11 w-11 overflow-hidden rounded-full border border-black/20 bg-black/5">
             <Image
               src="/GAV_Logo1_nobg.png"
-              alt="Giang Anh Vu monogram"
+              alt="Giang Anh Vu"
               fill
               className="object-contain p-1"
               priority
             />
           </div>
-          <span className="font-serif text-2xl font-semibold tracking-[0.18em] uppercase text-black"></span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-4 flex-1 min-w-0 ml-8 md:ml-16">
-          <nav 
+        <div className="hidden md:flex items-center gap-4 flex-1 min-w-0 ml-8">
+          <nav
             ref={navRef}
-            className="flex items-center gap-10 overflow-x-auto scrollbar-hide max-w-[calc(100vw-24rem)] scroll-smooth"
+            className="flex items-center gap-8 overflow-x-auto scrollbar-hide max-w-[calc(100vw-20rem)] scroll-smooth"
           >
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-[0.95rem] font-semibold uppercase tracking-[0.32em] text-black/70 transition hover:text-black whitespace-nowrap flex-shrink-0"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-[0.82rem] font-semibold uppercase tracking-[0.28em] transition whitespace-nowrap flex-shrink-0 ${
+                    isActive
+                      ? "text-black border-b-2 border-gold pb-0.5"
+                      : "text-black/60 hover:text-black"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
           <Link
             href="/Giang_Anh_Vu_Resume.pdf"
             target="_blank"
-            className="rounded-full border border-black/30 px-6 py-2 text-sm font-semibold uppercase tracking-[0.38em] text-black transition hover:bg-black hover:text-white flex-shrink-0 ml-4"
+            className="rounded-full border border-black/30 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-black hover:text-white flex-shrink-0 ml-4"
           >
             Resume
           </Link>
         </div>
 
-        <MobileMenu />
+        <MobileMenu pathname={pathname} />
       </div>
     </header>
   );
 }
 
-function MobileMenu() {
+function MobileMenu({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -146,30 +151,35 @@ function MobileMenu() {
         </div>
       </button>
       <div
-        className={`fixed inset-0 z-40 bg-gradient-to-b from-ink to-ink/95 backdrop-blur-sm transition-opacity ${
+        className={`fixed inset-0 z-40 bg-gradient-to-b from-ink to-ink/95 backdrop-blur-sm transition-opacity duration-300 ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setOpen(false)}
       >
         <div
-          className="absolute inset-x-0 top-24 mx-auto flex max-w-sm flex-col gap-6 px-10 text-center"
+          className="absolute inset-x-0 top-24 mx-auto flex max-w-sm flex-col gap-5 px-10 text-center"
           onClick={(event) => event.stopPropagation()}
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="text-lg font-semibold uppercase tracking-[0.4em] text-black/80 transition hover:text-black"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={`text-lg font-semibold uppercase tracking-[0.4em] transition ${
+                  isActive ? "text-black" : "text-black/60 hover:text-black"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <Link
             href="/Giang_Anh_Vu_Resume.pdf"
             target="_blank"
             onClick={() => setOpen(false)}
-            className="rounded-full border border-black/40 px-6 py-3 text-base font-semibold uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
+            className="mt-2 rounded-full border border-black/40 px-6 py-3 text-base font-semibold uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
           >
             Resume
           </Link>
@@ -178,4 +188,3 @@ function MobileMenu() {
     </div>
   );
 }
-
