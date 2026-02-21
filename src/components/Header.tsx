@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { ResumeLink } from "@/components/ResumeLink";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
@@ -94,13 +95,9 @@ export function Header() {
               );
             })}
           </nav>
-          <a
-            href="/Giang_Anh_Vu_Resume.pdf"
-            download="Giang_Anh_Vu_Resume.pdf"
-            className="rounded-full border border-black/30 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-black hover:text-white flex-shrink-0 ml-4"
-          >
+          <ResumeLink className="rounded-full border border-black/30 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-black hover:text-white flex-shrink-0 ml-4">
             Resume
-          </a>
+          </ResumeLink>
         </div>
 
         <MobileMenu pathname={pathname} />
@@ -175,14 +172,12 @@ function MobileMenu({ pathname }: { pathname: string }) {
               </Link>
             );
           })}
-          <a
-            href="/Giang_Anh_Vu_Resume.pdf"
-            download="Giang_Anh_Vu_Resume.pdf"
+          <ResumeLink
             onClick={() => setOpen(false)}
             className="mt-2 rounded-full border border-black/40 px-6 py-3 text-base font-semibold uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
           >
             Resume
-          </a>
+          </ResumeLink>
         </div>
       </div>
     </div>

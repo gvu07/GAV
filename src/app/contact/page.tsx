@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResumeLink } from "@/components/ResumeLink";
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 
 const contactDetails = [
@@ -84,13 +85,9 @@ export default function ContactPage() {
               <p className="text-sm leading-7 text-black/60">
                 Get the complete overview of experience, tools, and impact across engineering and design.
               </p>
-              <a
-                href="/Giang_Anh_Vu_Resume.pdf"
-                download="Giang_Anh_Vu_Resume.pdf"
-                className="inline-flex items-center gap-3 rounded-full border border-black/30 px-6 py-3 text-xs uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
-              >
+              <ResumeLink className="inline-flex items-center gap-3 rounded-full border border-black/30 px-6 py-3 text-xs uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white">
                 Download PDF
-              </a>
+              </ResumeLink>
             </div>
           </div>
 
