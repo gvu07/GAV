@@ -247,13 +247,13 @@ export default function HomePage() {
             Whether it&apos;s a research collaboration, a project idea, or just a conversation — I&apos;d love to hear from you.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link
+            <a
               href="/Giang_Anh_Vu_Resume.pdf"
-              target="_blank"
+              download="Giang_Anh_Vu_Resume.pdf"
               className="inline-flex items-center gap-3 rounded-full border border-black/30 bg-black/10 px-8 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-black hover:text-white"
             >
               Download Resume
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="inline-flex items-center gap-3 rounded-full border border-black/20 px-8 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-black/80 transition hover:border-black/50 hover:text-black"

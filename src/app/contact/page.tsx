@@ -84,13 +84,13 @@ export default function ContactPage() {
               <p className="text-sm leading-7 text-black/60">
                 Get the complete overview of experience, tools, and impact across engineering and design.
               </p>
-              <Link
+              <a
                 href="/Giang_Anh_Vu_Resume.pdf"
-                target="_blank"
+                download="Giang_Anh_Vu_Resume.pdf"
                 className="inline-flex items-center gap-3 rounded-full border border-black/30 px-6 py-3 text-xs uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
               >
                 Download PDF
-              </Link>
+              </a>
             </div>
           </div>
 

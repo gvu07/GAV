@@ -94,13 +94,13 @@ export function Header() {
               );
             })}
           </nav>
-          <Link
+          <a
             href="/Giang_Anh_Vu_Resume.pdf"
-            target="_blank"
+            download="Giang_Anh_Vu_Resume.pdf"
             className="rounded-full border border-black/30 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-black hover:text-white flex-shrink-0 ml-4"
           >
             Resume
-          </Link>
+          </a>
         </div>
 
         <MobileMenu pathname={pathname} />
@@ -175,14 +175,14 @@ function MobileMenu({ pathname }: { pathname: string }) {
               </Link>
             );
           })}
-          <Link
+          <a
             href="/Giang_Anh_Vu_Resume.pdf"
-            target="_blank"
+            download="Giang_Anh_Vu_Resume.pdf"
             onClick={() => setOpen(false)}
             className="mt-2 rounded-full border border-black/40 px-6 py-3 text-base font-semibold uppercase tracking-[0.4em] text-black transition hover:bg-black hover:text-white"
           >
             Resume
-          </Link>
+          </a>
         </div>
       </div>
     </div>
